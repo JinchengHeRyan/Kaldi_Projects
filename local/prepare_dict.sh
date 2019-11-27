@@ -10,3 +10,6 @@ echo 'SIL' > optional_silence.txt
 cd ../../../
 
 utils/prepare_lang.sh data/local/lang 'OOV' data/local/ data/lang
+
+# spk2utt
+utils/fix_data_dir.sh data/train

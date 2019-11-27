@@ -3,10 +3,10 @@ mkdir -p data/train/
 WAVES_DATA_PATH=$1
 # Prepare utt2spk in train and test
 for x in train test; do
-    find ${WAVES_DATA_PATH}/$x/ -name "*.WAV" | sort | awk -F '[/.]' '{print $5, $4}' > data/$x/utt2spk
+    find ${WAVES_DATA_PATH}/$x/ -name "*.WAV" | sort | awk -F '[/.]' '{print $5, $4}' | sort > data/$x/utt2spk
 
 # Prepare wav.scp in train and test
-    find ${WAVES_DATA_PATH}/$x/ -name "*.WAV" | sort | awk -F '[/.]' '{print $5, $0}' > data/$x/wav.scp
+    find ${WAVES_DATA_PATH}/$x/ -name "*.WAV" | sort | awk -F '[/.]' '{print $5, $0}' | sort > data/$x/wav.scp
 
 # Prepare text in train and test
     rm -f data/$x/text
