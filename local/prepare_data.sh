@@ -1,6 +1,5 @@
-mkdir data/
-mkdir data/test/
-mkdir data/train/
+mkdir -p data/test/
+mkdir -p data/train/
 waves_data_PATH=waves_data
 # Prepare utt2spk in train and test
 for x in train test; do
