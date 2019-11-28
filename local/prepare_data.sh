@@ -20,3 +20,6 @@ for x in train test; do
     cut -d ' ' -f 2- text | sed 's/ /\n/g' | sort -u > words.txt
     cd ../../
 done
+
+# Prepare spk2utt
+utils/fix_data_dir.sh data/train
