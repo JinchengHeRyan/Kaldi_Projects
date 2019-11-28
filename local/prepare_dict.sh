@@ -8,5 +8,3 @@ cut -d ' ' -f 2- lexicon.txt | sed 's/ /\n/g' | sort -u > nonsilence_phones.txt
 echo -e 'SIL'\\n'oov' > silence_phones.txt
 echo 'SIL' > optional_silence.txt
 cd ../../../
-
-utils/prepare_lang.sh data/local/lang 'OOV' data/local/ data/lang

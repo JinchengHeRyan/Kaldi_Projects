@@ -6,7 +6,7 @@ for x in train test; do
     find ${WAVES_DATA_PATH}/$x/ -name "*.WAV" | sort | awk -F '[/.]' '{print $4"_"$5, $4}' | sort > data/$x/utt2spk
 
 # Prepare wav.scp in train and test
-    find ${WAVES_DATA_PATH}/$x/ -name "*.WAV" | sort | awk -F '[/.]' '{print $4"_"$5, $0}' | sort > data/$x/wav.scp
+    find ${WAVES_DATA_PATH}/$x/ -name "*.WAV" | sort | awk -F '[/.]' '{print $4"_"$5, "/home/kaldi/tools/sph2pipe_v2.5/sph2pipe -f rif < "$0" > |"}' | sort > data/$x/wav.scp
 
 # Prepare text in train and test
     rm -f data/$x/text
@@ -20,6 +20,3 @@ for x in train test; do
     cut -d ' ' -f 2- text | sed 's/ /\n/g' | sort -u > words.txt
     cd ../../
 done
-
-# Prepare spk2utt
-utils/fix_data_dir.sh data/train
