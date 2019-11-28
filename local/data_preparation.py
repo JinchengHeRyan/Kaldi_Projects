@@ -3,14 +3,15 @@ def create_text_file():
     n = open('text', 'w')
     context = f.readlines()
     for line in context:
-        file_name = line.split()[0]
+        file_name_full = line.split()[0]
+        file_name = line.split()[0].split('_')[1]
         ans = ""
         for char in file_name:
             if char == 'A' or char == 'B':
                 continue
             ans += word_dict()[char] + ' '
         ans = ans[:-1]
-        n.write(file_name + ' ' + ans + '\n')
+        n.write(file_name_full + ' ' + ans + '\n')
 
 
 def word_dict():
