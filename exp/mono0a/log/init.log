@@ -1,0 +1,32 @@
+# gmm-init-mono --shared-phones=data/lang/phones/sets.int "--train-feats=ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:data/train/split4/1/feats.scp ark:- | add-deltas  ark:- ark:- | subset-feats --n=10 ark:- ark:-|" data/lang/topo 39 exp/mono0a/0.mdl exp/mono0a/tree 
+# Started at Sat Nov 30 00:55:27 CST 2019
+#
+gmm-init-mono --shared-phones=data/lang/phones/sets.int '--train-feats=ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:data/train/split4/1/feats.scp ark:- | add-deltas  ark:- ark:- | subset-feats --n=10 ark:- ark:-|' data/lang/topo 39 exp/mono0a/0.mdl exp/mono0a/tree 
+add-deltas ark:- ark:- 
+subset-feats --n=10 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split4/1/utt2spk scp:data/train/split4/1/cmvn.scp scp:data/train/split4/1/feats.scp ark:- 
+ERROR (gmm-init-mono[5.5.166~1-013489]:ExpectToken():io-funcs.cc:203) Failed to read token [started at file position -1], expected <Topology>
+
+[ Stack-Trace: ]
+kaldi::MessageLogger::HandleMessage(kaldi::LogMessageEnvelope const&, char const*)
+kaldi::FatalMessageLogger::~FatalMessageLogger()
+kaldi::ExpectToken(std::istream&, bool, char const*)
+kaldi::HmmTopology::Read(std::istream&, bool)
+main
+__libc_start_main
+_start
+
+ERROR (gmm-init-mono[5.5.166~1-013489]:ExpectToken():io-funcs.cc:203) Failed to read token [started at file position -1], expected <Topology>
+
+[ Stack-Trace: ]
+kaldi::MessageLogger::HandleMessage(kaldi::LogMessageEnvelope const&, char const*)
+kaldi::MessageLogger::~MessageLogger()
+kaldi::FatalMessageLogger::~FatalMessageLogger()
+kaldi::ExpectToken(std::istream&, bool, char const*)
+kaldi::HmmTopology::Read(std::istream&, bool)
+main
+__libc_start_main
+_start
+
+# Accounting: time=0 threads=1
+# Ended (code 255) at Sat Nov 30 00:55:27 CST 2019, elapsed time 0 seconds

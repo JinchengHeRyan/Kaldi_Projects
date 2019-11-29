@@ -1,5 +1,5 @@
 # compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/train/wav_train.2.scp ark:- | copy-feats --compress=true ark:- ark,scp:/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_train.2.ark,/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_train.2.scp 
-# Started at Fri Nov 29 23:22:00 CST 2019
+# Started at Sat Nov 30 00:55:14 CST 2019
 #
 copy-feats --compress=true ark:- ark,scp:/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_train.2.ark,/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_train.2.scp 
 compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/train/wav_train.2.scp ark:- 
@@ -598,4 +598,4 @@ VLOG[2] (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:173) 
 LOG (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:176)  Done 539 out of 539 utterances.
 LOG (copy-feats[5.5.166~1-013489]:main():copy-feats.cc:143) Copied 539 feature matrices.
 # Accounting: time=6 threads=1
-# Ended (code 0) at Fri Nov 29 23:22:06 CST 2019, elapsed time 6 seconds
+# Ended (code 0) at Sat Nov 30 00:55:20 CST 2019, elapsed time 6 seconds
