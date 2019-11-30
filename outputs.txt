@@ -1,0 +1,213 @@
+fix_data_dir.sh: kept all 8623 utterances.
+fix_data_dir.sh: old files are kept in data/train/.backup
+fix_data_dir.sh: kept all 8700 utterances.
+fix_data_dir.sh: old files are kept in data/test/.backup
+utils/validate_lang.pl data/lang/
+Checking data/lang//phones.txt ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/lang//phones.txt is OK
+
+Checking words.txt: #0 ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/lang//words.txt is OK
+
+Checking disjoint: silence.txt, nonsilence.txt, disambig.txt ...
+--> silence.txt and nonsilence.txt are disjoint
+--> silence.txt and disambig.txt are disjoint
+--> disambig.txt and nonsilence.txt are disjoint
+--> disjoint property is OK
+
+Checking sumation: silence.txt, nonsilence.txt, disambig.txt ...
+--> WARNING: data/lang//phones/disambig.txt is empty or does not exist
+--> found no unexplainable phones in phones.txt
+
+Checking data/lang//phones/context_indep.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang//phones/context_indep.txt
+--> data/lang//phones/context_indep.int corresponds to data/lang//phones/context_indep.txt
+--> data/lang//phones/context_indep.csl corresponds to data/lang//phones/context_indep.txt
+--> data/lang//phones/context_indep.{txt, int, csl} are OK
+
+Checking data/lang//phones/nonsilence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 19 entry/entries in data/lang//phones/nonsilence.txt
+--> data/lang//phones/nonsilence.int corresponds to data/lang//phones/nonsilence.txt
+--> data/lang//phones/nonsilence.csl corresponds to data/lang//phones/nonsilence.txt
+--> data/lang//phones/nonsilence.{txt, int, csl} are OK
+
+Checking data/lang//phones/silence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang//phones/silence.txt
+--> data/lang//phones/silence.int corresponds to data/lang//phones/silence.txt
+--> data/lang//phones/silence.csl corresponds to data/lang//phones/silence.txt
+--> data/lang//phones/silence.{txt, int, csl} are OK
+
+Checking data/lang//phones/optional_silence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang//phones/optional_silence.txt
+--> data/lang//phones/optional_silence.int corresponds to data/lang//phones/optional_silence.txt
+--> data/lang//phones/optional_silence.csl corresponds to data/lang//phones/optional_silence.txt
+--> data/lang//phones/optional_silence.{txt, int, csl} are OK
+
+Checking data/lang//phones/disambig.{txt, int, csl} ...
+--> WARNING: data/lang//phones/disambig.txt is empty
+--> WARNING: data/lang//phones/disambig.int is empty
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 0 entry/entries in data/lang//phones/disambig.txt
+--> data/lang//phones/disambig.int corresponds to data/lang//phones/disambig.txt
+--> data/lang//phones/disambig.csl corresponds to data/lang//phones/disambig.txt
+--> data/lang//phones/disambig.{txt, int, csl} are OK
+
+Checking data/lang//phones/roots.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 20 entry/entries in data/lang//phones/roots.txt
+--> data/lang//phones/roots.int corresponds to data/lang//phones/roots.txt
+--> data/lang//phones/roots.{txt, int} are OK
+
+Checking data/lang//phones/sets.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 20 entry/entries in data/lang//phones/sets.txt
+--> data/lang//phones/sets.int corresponds to data/lang//phones/sets.txt
+--> data/lang//phones/sets.{txt, int} are OK
+
+Checking data/lang//phones/extra_questions.{txt, int} ...
+Checking optional_silence.txt ...
+--> reading data/lang//phones/optional_silence.txt
+--> data/lang//phones/optional_silence.txt is OK
+
+Checking disambiguation symbols: #0 and #1
+--> WARNING: data/lang//phones/disambig.txt is empty or does not exist
+--> WARNING: data/lang//phones/disambig.txt doesn't have "#0" or "#1";
+-->          this would not be OK with a conventional ARPA-type language
+-->          model or a conventional lexicon (L.fst)
+Checking topo ...
+
+Checking word-level disambiguation symbols...
+--> no data/lang//phones/wdisambig.txt (older prepare_lang.sh)
+--> WARNING: data/lang//words.txt doesn't have "#0"
+-->          (if you are using ARPA-type language models, you will normally
+-->           need the disambiguation symbol "#0" to ensure determinizability)
+Checking data/lang//oov.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang//oov.txt
+--> data/lang//oov.int corresponds to data/lang//oov.txt
+--> data/lang//oov.{txt, int} are OK
+
+--> data/lang//L.fst is olabel sorted
+--> data/lang//L_disambig.fst is olabel sorted
+--> data/lang//G.fst is ilabel sorted
+--> data/lang//G.fst has 1 states
+--> data/lang//G.fst is determinizable
+--> utils/lang/check_g_properties.pl successfully validated data/lang//G.fst
+--> utils/lang/check_g_properties.pl succeeded.
+--> Testing determinizability of L_disambig . G
+--> L_disambig . G is determinizable
+--> WARNING (check output above for warnings)
+steps/make_mfcc.sh --cmd utils/run.pl --nj 16 data/train exp/make_mfcc/train mfcc
+utils/validate_data_dir.sh: Successfully validated data-directory data/train
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating MFCC features for train
+steps/compute_cmvn_stats.sh data/train exp/make_mfcc/train mfcc
+Succeeded creating CMVN stats for train
+steps/make_mfcc.sh --cmd utils/run.pl --nj 16 data/test exp/make_mfcc/test mfcc
+utils/validate_data_dir.sh: Successfully validated data-directory data/test
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating MFCC features for test
+steps/compute_cmvn_stats.sh data/test exp/make_mfcc/test mfcc
+Succeeded creating CMVN stats for test
+steps/train_mono.sh --nj 32 --cmd utils/run.pl data/train data/lang exp/mono0a
+steps/train_mono.sh: Initializing monophone system.
+steps/train_mono.sh: Compiling training graphs
+steps/train_mono.sh: Aligning data equally (pass 0)
+steps/train_mono.sh: Pass 1
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 2
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 3
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 4
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 5
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 6
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 7
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 8
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 9
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 10
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 11
+steps/train_mono.sh: Pass 12
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 13
+steps/train_mono.sh: Pass 14
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 15
+steps/train_mono.sh: Pass 16
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 17
+steps/train_mono.sh: Pass 18
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 19
+steps/train_mono.sh: Pass 20
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 21
+steps/train_mono.sh: Pass 22
+steps/train_mono.sh: Pass 23
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 24
+steps/train_mono.sh: Pass 25
+steps/train_mono.sh: Pass 26
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 27
+steps/train_mono.sh: Pass 28
+steps/train_mono.sh: Pass 29
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 30
+steps/train_mono.sh: Pass 31
+steps/train_mono.sh: Pass 32
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 33
+steps/train_mono.sh: Pass 34
+steps/train_mono.sh: Pass 35
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 36
+steps/train_mono.sh: Pass 37
+steps/train_mono.sh: Pass 38
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 39
+steps/diagnostic/analyze_alignments.sh --cmd utils/run.pl data/lang exp/mono0a
+steps/diagnostic/analyze_alignments.sh: see stats in exp/mono0a/log/analyze_alignments.log
+24 warnings in exp/mono0a/log/acc.*.*.log
+1800 warnings in exp/mono0a/log/update.*.log
+7119 warnings in exp/mono0a/log/align.*.*.log
+exp/mono0a: nj=32 align prob=-91.94 over 4.17h [retry=1.2%, fail=0.0%] states=62 gauss=994
+steps/train_mono.sh: Done training monophone system in exp/mono0a
+0.000106796 7.95592e-05
+0.000106796 7.95592e-05
+0.000374163 -6.61501e-05
+steps/decode.sh --nj 10 --cmd utils/run.pl exp/mono0a/graph data/test exp/mono0a/decode
+decode.sh: feature type is delta
+steps/diagnostic/analyze_lats.sh --cmd utils/run.pl exp/mono0a/graph exp/mono0a/decode
+steps/diagnostic/analyze_lats.sh: see stats in exp/mono0a/decode/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,2,4) and mean=2.6
+steps/diagnostic/analyze_lats.sh: see stats in exp/mono0a/decode/log/analyze_lattice_depth_stats.log
+steps/align_si.sh --boost-silence 1.25 --nj 16 --cmd utils/run.pl data/train data/lang exp/mono0a exp/mono0a_ali
+steps/align_si.sh: feature type is delta
+steps/align_si.sh: aligning data in data/train using model from exp/mono0a, putting alignments in exp/mono0a_ali
+steps/diagnostic/analyze_alignments.sh --cmd utils/run.pl data/lang exp/mono0a_ali
+steps/diagnostic/analyze_alignments.sh: see stats in exp/mono0a_ali/log/analyze_alignments.log
+steps/align_si.sh: done aligning data.

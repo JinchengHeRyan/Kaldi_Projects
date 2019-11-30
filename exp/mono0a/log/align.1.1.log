@@ -1,0 +1,356 @@
+# gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=6 --retry-beam=24 --careful=false "gmm-boost-silence --boost=1.0 1 exp/mono0a/1.mdl - |" "ark:gunzip -c exp/mono0a/fsts.1.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/1/utt2spk scp:data/train/split32/1/cmvn.scp scp:data/train/split32/1/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark,t:|gzip -c >exp/mono0a/ali.1.gz" 
+# Started at Sat Nov 30 14:58:28 CST 2019
+#
+gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=6 --retry-beam=24 --careful=false 'gmm-boost-silence --boost=1.0 1 exp/mono0a/1.mdl - |' 'ark:gunzip -c exp/mono0a/fsts.1.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/1/utt2spk scp:data/train/split32/1/cmvn.scp scp:data/train/split32/1/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark,t:|gzip -c >exp/mono0a/ali.1.gz' 
+gmm-boost-silence --boost=1.0 1 exp/mono0a/1.mdl - 
+LOG (gmm-boost-silence[5.5.166~1-013489]:main():gmm-boost-silence.cc:93) Boosted weights for 5 pdfs, by factor of 1
+LOG (gmm-boost-silence[5.5.166~1-013489]:main():gmm-boost-silence.cc:103) Wrote model to -
+apply-cmvn --utt2spk=ark:data/train/split32/1/utt2spk scp:data/train/split32/1/cmvn.scp scp:data/train/split32/1/feats.scp ark:- 
+add-deltas ark:- ark:- 
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_13A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_1473533A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_172A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_1911446A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_1B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_1O1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_24Z52A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_26555A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_282A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_29A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_29OA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_2A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_2B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_32421A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_33O31A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_369O5A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_37O1641A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_39ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_3A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_3B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_434A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_43A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_47A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_4876A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_4915A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_4A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_4B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_54A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_5821A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_59Z2A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_5A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_5B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_5Z26ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_5Z31ZZ4A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_62793A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_635A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_68A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_6A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_6B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_6O46A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_6Z88A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_71A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_72A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_7513ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_7932A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_7A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_7B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_7Z57A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_81A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_83966A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_889922ZA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AC_889922ZA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_8A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_8B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_8O4A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_8Z6983ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_92587A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_94OOA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_951A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_964177OA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_98A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_9A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_9B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_O22O6OOA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AC_O22O6OOA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_O274A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_O6197O8A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AC_O6197O8A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_O952O99A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AC_O952O99A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_OA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_OB
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_OO736A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_Z12A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_Z1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_Z75A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_Z849768A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_Z945A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AC_ZB
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_12A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_161A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_18174A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_1986A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_1B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_1Z88153A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_1Z88153A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_2364213A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_2364213A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_23A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_2789385A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_2789385A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_2992A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_29A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_2A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_2B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_32ZZZA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_32ZZZA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_338Z4A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_338Z4A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_345A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_3713466A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_3713466A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_3A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_3B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_3O2OA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_3O2OA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_46A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_47A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_49ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_4A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_4B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_4OO9A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_4OO9A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_4Z4A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_52251A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_52O82A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_52O82A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_562A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_59976A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_5A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_5B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_5ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_658A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_6711A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_67A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_6825969A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_6825969A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_6851243A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_6851243A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_6A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_6B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_72O3A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_72O3A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_75443Z7A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_75443Z7A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_7588OA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_7588OA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_79442A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_7963A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_7A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_7B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_8397261A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_8397261A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_84A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_873A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_8A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_8B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_8O45647A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_8O45647A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_8Z1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_91955A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_928A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_93A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_95OA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_9A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_9B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_9O37OA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_9O37OA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_O2A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_O5O1OA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_O5O1OA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_O6OA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_O984A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_OA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_OB
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_OO74A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_Z1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_Z26ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_Z36357ZA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_Z36357ZA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_Z541A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_Z9Z6531A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AE_Z9Z6531A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AE_ZB
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_14A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_1528A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_1736ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_179O7A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_1B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_1O2A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_213OOA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_24OA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_251O4A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_26A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_2A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_2B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_2OO1O83A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AG_2OO1O83A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_31ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_33A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_3528457A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_398349OA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AG_398349OA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_3A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_3B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_3ZZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_437OOA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_446A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_451A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_4727A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_4A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_4B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_4ZZ6432A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_54A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_55Z68Z3A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_56A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_58A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_59A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_5A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_5B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_632O6A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_633ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_64122Z1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_6547A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_67O4A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_6A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_6B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_75942A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_76O35A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_7712719A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AG_7712719A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_779A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_7A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_7B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_7Z5A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_81465O1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_824O958A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_8613A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_8875A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_8A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_8B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_8O53A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_92A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_95A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_96A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_9731925A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_9A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_9B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_9Z7ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_O37A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_O6169A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_O8448A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_O97A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_OA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_OB
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_OOA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_Z236A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_Z811A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_Z9485A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_Z96A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AG_ZB
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_1363A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_1532OA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AI_1532OA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_156267ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_173Z1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_1B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_1Z17A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_212A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_22A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_2411A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_282O343A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_2935Z8ZA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AI_2935Z8ZA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_2A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_2B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_31A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_338A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_3664A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_373ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_39834A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_3A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_3B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_425OO79A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_435A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_44823A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_47O6OA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_4A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_4B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_4O57A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_52ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_531Z766A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_5454846A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_5578A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_5A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_5B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_5Z25A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_64O8A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_659O8A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_686A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_69O721OA
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AI_69O721OA with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_6A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_6B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_6ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_7246A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_74A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_7794971A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AI_7794971A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_7A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_7B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_7O6A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_7Z5A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_812A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_81A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_833O4A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_8A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_8B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_8O3O511A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AI_8O3O511A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_8ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_9145289A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AI_9145289A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_914A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_922ZZZ6A
+WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance AI_922ZZZ6A with beam 24
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_94Z9ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_95674A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_9A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_9B
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_O18A
+LOG (apply-cmvn[5.5.166~1-013489]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 307 utterances, errors on 0
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_O1A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_OA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_OB
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_OO42A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_OO969A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_OOA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_Z2A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_Z3A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_Z5168A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_Z63A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_Z9A
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_ZA
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) AI_ZB
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:135) Overall log-likelihood per frame is -107.209 over 49916 frames.
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:137) Retried 34 out of 307 utterances.
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:139) Done 307, errors on 0
+# Accounting: time=1 threads=1
+# Ended (code 0) at Sat Nov 30 14:58:29 CST 2019, elapsed time 1 seconds

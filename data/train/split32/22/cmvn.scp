@@ -1,0 +1,3 @@
+LD /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:17911
+LH /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:18153
+LS /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:18395

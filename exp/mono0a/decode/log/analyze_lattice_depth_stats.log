@@ -1,0 +1,13 @@
+# gunzip -c exp/mono0a/decode/depth_stats_tmp.*.gz | steps/diagnostic/analyze_lattice_depth_stats.py exp/mono0a/graph 
+# Started at Sat Nov 30 14:59:45 CST 2019
+#
+The total amount of data analyzed assuming 100 frames per second is 4.2 hours
+Overall, lattice depth (10,50,90-percentile)=(1,2,4) and mean=2.6
+Nonsilence phones as a group account for 72.3% of frames, with lattice depth (10,50,90-percentile)=(1,2,4) and mean=2.6
+Phone r accounts for 30.3% of frames, with lattice depth (10,50,90-percentile)=(1,2,4) and mean=2.5
+Phone sil accounts for 27.7% of frames, with lattice depth (10,50,90-percentile)=(1,2,4) and mean=2.6
+Phone ow accounts for 14.6% of frames, with lattice depth (10,50,90-percentile)=(1,2,5) and mean=3.0
+Phone iy accounts for 13.9% of frames, with lattice depth (10,50,90-percentile)=(1,2,4) and mean=2.4
+Phone z accounts for 13.5% of frames, with lattice depth (10,50,90-percentile)=(1,2,4) and mean=2.4
+# Accounting: time=0 threads=1
+# Ended (code 0) at Sat Nov 30 14:59:45 CST 2019, elapsed time 0 seconds

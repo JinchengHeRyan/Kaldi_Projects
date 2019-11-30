@@ -1,5 +1,5 @@
 local/prepare_data.sh waves_data
-local/prepare_dict.sh
+# local/prepare_dict.sh
 local/prepare_lm.sh
 utils/validate_lang.pl data/lang/
 
@@ -26,7 +26,7 @@ done
 # steps/align_si.sh --boost-silence 1.25 --nj 16 --cmd "$train_cmd" \
 # data/train data/lang exp/mono_1k exp/mono_ali || exit 1;
 
-steps/train_mono.sh  --nj 4 --cmd "$train_cmd" \
+steps/train_mono.sh  --nj 32 --cmd "$train_cmd" \
   data/train data/lang exp/mono0a
 
 utils/mkgraph.sh data/lang exp/mono0a exp/mono0a/graph && \

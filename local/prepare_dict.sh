@@ -1,6 +1,8 @@
 # Copy lexicon.txt into data/local/lang/
 mkdir -p data/local/lang/
+mkdir -p data/local/dict/
 cp input/lexicon.txt data/local/lang/
+cp input/lexicon.txt data/local/dict/
 
 # Create nonsilence_phones.txt silence_phones.txt optional_silence.txt
 cd data/local/lang/
