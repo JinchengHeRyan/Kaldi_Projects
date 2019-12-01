@@ -1,12 +1,12 @@
 # align-equal-compiled "ark:gunzip -c exp/mono0a/fsts.10.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/10/utt2spk scp:data/train/split32/10/cmvn.scp scp:data/train/split32/10/feats.scp ark:- | add-deltas  ark:- ark:- |" ark,t:- | gmm-acc-stats-ali --binary=true exp/mono0a/0.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/10/utt2spk scp:data/train/split32/10/cmvn.scp scp:data/train/split32/10/feats.scp ark:- | add-deltas  ark:- ark:- |" ark:- exp/mono0a/0.10.acc 
-# Started at Sat Nov 30 14:58:27 CST 2019
+# Started at Sun Dec  1 21:58:06 CST 2019
 #
 align-equal-compiled 'ark:gunzip -c exp/mono0a/fsts.10.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/10/utt2spk scp:data/train/split32/10/cmvn.scp scp:data/train/split32/10/feats.scp ark:- | add-deltas  ark:- ark:- |' ark,t:- 
 gmm-acc-stats-ali --binary=true exp/mono0a/0.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/10/utt2spk scp:data/train/split32/10/cmvn.scp scp:data/train/split32/10/feats.scp ark:- | add-deltas  ark:- ark:- |' ark:- exp/mono0a/0.10.acc 
-apply-cmvn --utt2spk=ark:data/train/split32/10/utt2spk scp:data/train/split32/10/cmvn.scp scp:data/train/split32/10/feats.scp ark:- 
 add-deltas ark:- ark:- 
 apply-cmvn --utt2spk=ark:data/train/split32/10/utt2spk scp:data/train/split32/10/cmvn.scp scp:data/train/split32/10/feats.scp ark:- 
 add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split32/10/utt2spk scp:data/train/split32/10/cmvn.scp scp:data/train/split32/10/feats.scp ark:- 
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance FC_817A avg. like is -109.24 over 162 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance FD_4571A avg. like is -105.081 over 187 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance FD_Z62ZZ3ZA avg. like is -110.649 over 337 frames.
@@ -17,5 +17,5 @@ LOG (apply-cmvn[5.5.166~1-013489]:main():apply-cmvn.cc:162) Applied cepstral mea
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 231 files, 0 with errors.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -107.814 over 41071 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
-# Accounting: time=1 threads=1
-# Ended (code 0) at Sat Nov 30 14:58:28 CST 2019, elapsed time 1 seconds
+# Accounting: time=0 threads=1
+# Ended (code 0) at Sun Dec  1 21:58:06 CST 2019, elapsed time 0 seconds

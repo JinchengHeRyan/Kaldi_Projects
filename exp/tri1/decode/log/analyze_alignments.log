@@ -1,0 +1,19 @@
+# gunzip -c exp/tri1/decode/phone_stats.*.gz | steps/diagnostic/analyze_phone_length_stats.py exp/tri1/graph 
+# Started at Sun Dec  1 22:03:27 CST 2019
+#
+At utterance begin, sil accounts for 99.8% of phone occurrences, with duration (median, mean, 95-percentile) is (20,25.2,48) frames.
+At utterance end, sil accounts for 98.8% of phone occurrences, with duration (median, mean, 95-percentile) is (20,20.1,26) frames.
+At utterance end, nonsilence accounts for 1.2% of phone occurrences, with duration (median, mean, 95-percentile) is (27,28.3,44) frames.
+At utterance end, ow accounts for 1.2% of phone occurrences, with duration (median, mean, 95-percentile) is (27,28.3,44) frames.
+Overall, nonsilence accounts for 85.6% of phone occurrences, with duration (median, mean, 95-percentile) is (8,9.8,24) frames.
+Overall, ow accounts for 21.5% of phone occurrences, with duration (median, mean, 95-percentile) is (6,8.4,21) frames.
+Overall, r accounts for 21.4% of phone occurrences, with duration (median, mean, 95-percentile) is (15,15.6,31) frames.
+Overall, iy accounts for 21.4% of phone occurrences, with duration (median, mean, 95-percentile) is (6,7.7,18) frames.
+Overall, z accounts for 21.4% of phone occurrences, with duration (median, mean, 95-percentile) is (7,7.5,16) frames.
+Overall, sil accounts for 14.4% of phone occurrences, with duration (median, mean, 95-percentile) is (20,21.7,45) frames.
+The optional-silence phone sil occupies 27.1% of frames overall 
+Limiting the stats to the 74.0% of frames not covered by an utterance-[begin/end] phone, optional-silence sil occupies 1.8% of frames.
+Assuming 100 frames per second, the alignments represent 4.2 hours of data, or 3.1 hours if sil frames are excluded.
+Utterance-internal optional-silences sil comprise 1.5% of utterance-internal phones, with duration (median, mean, 95-percentile) = (7,11.8,35)
+# Accounting: time=0 threads=1
+# Ended (code 0) at Sun Dec  1 22:03:27 CST 2019, elapsed time 0 seconds

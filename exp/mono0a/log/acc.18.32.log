@@ -1,9 +1,9 @@
 # gmm-acc-stats-ali exp/mono0a/18.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/32/utt2spk scp:data/train/split32/32/cmvn.scp scp:data/train/split32/32/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:gunzip -c exp/mono0a/ali.32.gz|" exp/mono0a/18.32.acc 
-# Started at Sat Nov 30 14:58:56 CST 2019
+# Started at Sun Dec  1 21:58:34 CST 2019
 #
 gmm-acc-stats-ali exp/mono0a/18.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/32/utt2spk scp:data/train/split32/32/cmvn.scp scp:data/train/split32/32/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:gunzip -c exp/mono0a/ali.32.gz|' exp/mono0a/18.32.acc 
-apply-cmvn --utt2spk=ark:data/train/split32/32/utt2spk scp:data/train/split32/32/cmvn.scp scp:data/train/split32/32/feats.scp ark:- 
 add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split32/32/utt2spk scp:data/train/split32/32/cmvn.scp scp:data/train/split32/32/feats.scp ark:- 
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance SJ_8592O2OA avg. like is -96.5043 over 291 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance SP_455A avg. like is -89.8907 over 161 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance SP_Z81ZA avg. like is -94.142 over 200 frames.
@@ -13,4 +13,4 @@ LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 2
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -93.8675 over 39025 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
 # Accounting: time=0 threads=1
-# Ended (code 0) at Sat Nov 30 14:58:56 CST 2019, elapsed time 0 seconds
+# Ended (code 0) at Sun Dec  1 21:58:34 CST 2019, elapsed time 0 seconds

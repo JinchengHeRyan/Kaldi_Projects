@@ -1,0 +1,55 @@
+# gmm-acc-stats-ali exp/tri1/11.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark,s,cs:gunzip -c exp/tri1/ali.4.gz|" exp/tri1/11.4.acc 
+# Started at Sun Dec  1 22:00:15 CST 2019
+#
+gmm-acc-stats-ali exp/tri1/11.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark,s,cs:gunzip -c exp/tri1/ali.4.gz|' exp/tri1/11.4.acc 
+apply-cmvn --utt2spk=ark:data/train/split4/4/utt2spk scp:data/train/split4/4/cmvn.scp scp:data/train/split4/4/feats.scp ark:- 
+add-deltas ark:- ark:- 
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance MS_8242255A avg. like is -97.0069 over 303 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance MW_4282541A avg. like is -93.5282 over 323 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance MW_Z5A avg. like is -88.9562 over 181 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 200 utterances; for utterance NC_7553973A avg. like is -93.409 over 370 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 250 utterances; for utterance NE_3A avg. like is -91.799 over 89 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 300 utterances; for utterance NE_OB avg. like is -88.8003 over 102 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 350 utterances; for utterance NF_6O523A avg. like is -97.8604 over 185 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 400 utterances; for utterance NG_3212O6OA avg. like is -93.8972 over 249 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 450 utterances; for utterance NG_O1O5O76A avg. like is -92.6217 over 304 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 500 utterances; for utterance NH_63Z4638A avg. like is -93.8074 over 296 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 550 utterances; for utterance NI_2721364A avg. like is -99.2018 over 305 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 600 utterances; for utterance NI_9A avg. like is -84.5665 over 98 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 650 utterances; for utterance NR_5A avg. like is -83.3859 over 77 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 700 utterances; for utterance NW_1Z521Z6A avg. like is -90.8008 over 341 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 750 utterances; for utterance NW_928A avg. like is -93.1119 over 161 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 800 utterances; for utterance PB_5553A avg. like is -91.1013 over 178 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 850 utterances; for utterance PD_1637A avg. like is -95.4658 over 173 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 900 utterances; for utterance PD_86A avg. like is -90.8587 over 123 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 950 utterances; for utterance PE_4B avg. like is -85.0589 over 80 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1000 utterances; for utterance PE_ZA avg. like is -89.4903 over 94 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1050 utterances; for utterance PI_7B avg. like is -87.3022 over 88 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1100 utterances; for utterance PK_43672Z6A avg. like is -95.1457 over 388 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1150 utterances; for utterance PK_Z1ZZ831A avg. like is -94.0728 over 340 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1200 utterances; for utterance PM_73A avg. like is -88.7199 over 121 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1250 utterances; for utterance PP_382989OA avg. like is -94.1313 over 344 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1300 utterances; for utterance PP_O9718A avg. like is -91.0258 over 236 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1350 utterances; for utterance RA_6A avg. like is -88.8136 over 134 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1400 utterances; for utterance RD_2B avg. like is -82.1968 over 88 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1450 utterances; for utterance RD_O2OO8A avg. like is -96.9563 over 214 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1500 utterances; for utterance RE_62A avg. like is -88.5425 over 140 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1550 utterances; for utterance RF_225O1A avg. like is -87.8498 over 213 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1600 utterances; for utterance RF_955A avg. like is -87.4296 over 170 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1650 utterances; for utterance RN_5A avg. like is -88.6755 over 82 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1700 utterances; for utterance RP_1B avg. like is -88.0404 over 94 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1750 utterances; for utterance RP_8B avg. like is -87.5847 over 107 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1800 utterances; for utterance RR_5282252A avg. like is -93.1694 over 282 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1850 utterances; for utterance RS_14A avg. like is -86.9255 over 162 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1900 utterances; for utterance RS_8A avg. like is -85.6183 over 108 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 1950 utterances; for utterance SJ_48B avg. like is -94.6451 over 126 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 2000 utterances; for utterance SJ_ZA avg. like is -92.0035 over 106 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 2050 utterances; for utterance SP_7A avg. like is -88.06 over 93 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 2100 utterances; for utterance ST_3B avg. like is -88.8811 over 81 frames.
+LOG (apply-cmvn[5.5.166~1-013489]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 2156 utterances, errors on 0
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 2150 utterances; for utterance ST_Z2Z45Z7A avg. like is -95.1482 over 321 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 2156 files, 0 with errors.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -91.9328 over 375147 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
+# Accounting: time=3 threads=1
+# Ended (code 0) at Sun Dec  1 22:00:18 CST 2019, elapsed time 3 seconds

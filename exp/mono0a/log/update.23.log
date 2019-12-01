@@ -1,5 +1,5 @@
 # gmm-est --write-occs=exp/mono0a/24.occs --mix-up=744 --power=0.25 exp/mono0a/23.mdl "gmm-sum-accs - exp/mono0a/23.*.acc|" exp/mono0a/24.mdl 
-# Started at Sat Nov 30 14:59:04 CST 2019
+# Started at Sun Dec  1 21:58:41 CST 2019
 #
 gmm-est --write-occs=exp/mono0a/24.occs --mix-up=744 --power=0.25 exp/mono0a/23.mdl 'gmm-sum-accs - exp/mono0a/23.*.acc|' exp/mono0a/24.mdl 
 gmm-sum-accs - exp/mono0a/23.1.acc exp/mono0a/23.10.acc exp/mono0a/23.11.acc exp/mono0a/23.12.acc exp/mono0a/23.13.acc exp/mono0a/23.14.acc exp/mono0a/23.15.acc exp/mono0a/23.16.acc exp/mono0a/23.17.acc exp/mono0a/23.18.acc exp/mono0a/23.19.acc exp/mono0a/23.2.acc exp/mono0a/23.20.acc exp/mono0a/23.21.acc exp/mono0a/23.22.acc exp/mono0a/23.23.acc exp/mono0a/23.24.acc exp/mono0a/23.25.acc exp/mono0a/23.26.acc exp/mono0a/23.27.acc exp/mono0a/23.28.acc exp/mono0a/23.29.acc exp/mono0a/23.3.acc exp/mono0a/23.30.acc exp/mono0a/23.31.acc exp/mono0a/23.32.acc exp/mono0a/23.4.acc exp/mono0a/23.5.acc exp/mono0a/23.6.acc exp/mono0a/23.7.acc exp/mono0a/23.8.acc exp/mono0a/23.9.acc 
@@ -61,4 +61,4 @@ LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:116) GMM update: Overall avg li
 LOG (gmm-est[5.5.166~1-013489]:SplitByCount():am-diag-gmm.cc:116) Split 62 states with target = 744, power = 0.25, perturb_factor = 0.01 and min_count = 20, split #Gauss from 713 to 744
 LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:146) Written model to exp/mono0a/24.mdl
 # Accounting: time=0 threads=1
-# Ended (code 0) at Sat Nov 30 14:59:04 CST 2019, elapsed time 0 seconds
+# Ended (code 0) at Sun Dec  1 21:58:41 CST 2019, elapsed time 0 seconds

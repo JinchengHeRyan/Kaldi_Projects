@@ -1,9 +1,9 @@
 # gmm-acc-stats-ali exp/mono0a/2.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/24/utt2spk scp:data/train/split32/24/cmvn.scp scp:data/train/split32/24/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:gunzip -c exp/mono0a/ali.24.gz|" exp/mono0a/2.24.acc 
-# Started at Sat Nov 30 14:58:31 CST 2019
+# Started at Sun Dec  1 21:58:09 CST 2019
 #
 gmm-acc-stats-ali exp/mono0a/2.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/24/utt2spk scp:data/train/split32/24/cmvn.scp scp:data/train/split32/24/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:gunzip -c exp/mono0a/ali.24.gz|' exp/mono0a/2.24.acc 
-apply-cmvn --utt2spk=ark:data/train/split32/24/utt2spk scp:data/train/split32/24/cmvn.scp scp:data/train/split32/24/feats.scp ark:- 
 add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split32/24/utt2spk scp:data/train/split32/24/cmvn.scp scp:data/train/split32/24/feats.scp ark:- 
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance MM_8246A avg. like is -100.698 over 258 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance MP_44A avg. like is -99.2141 over 134 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance MP_Z7695A avg. like is -101.362 over 315 frames.
@@ -12,5 +12,5 @@ LOG (apply-cmvn[5.5.166~1-013489]:main():apply-cmvn.cc:162) Applied cepstral mea
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 231 files, 0 with errors.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -100.754 over 45940 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
-# Accounting: time=0 threads=1
-# Ended (code 0) at Sat Nov 30 14:58:31 CST 2019, elapsed time 0 seconds
+# Accounting: time=1 threads=1
+# Ended (code 0) at Sun Dec  1 21:58:10 CST 2019, elapsed time 1 seconds
