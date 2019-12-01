@@ -33,11 +33,11 @@ utils/mkgraph.sh data/lang exp/mono0a exp/mono0a/graph && \
 steps/decode.sh --nj 10 --cmd "$decode_cmd" \
    exp/mono0a/graph data/test exp/mono0a/decode
 
-# steps/align_si.sh --boost-silence 1.25 --nj 16 --cmd "$train_cmd" \
-# data/train data/lang exp/mono0a exp/mono0a_ali
+steps/align_si.sh --boost-silence 1.25 --nj 16 --cmd "$train_cmd" \
+data/train data/lang exp/mono0a exp/mono0a_ali
 
-steps/align_si.sh --nj 4 --cmd "$train_cmd" \
-   data/train data/lang exp/mono0a exp/mono0a_ali
+# steps/align_si.sh --nj 4 --cmd "$train_cmd" \
+#    data/train data/lang exp/mono0a exp/mono0a_ali
 
 steps/train_deltas.sh --cmd "$train_cmd" \
     300 3000 data/train data/lang exp/mono0a_ali exp/tri1

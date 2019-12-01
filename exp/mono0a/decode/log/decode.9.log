@@ -1,5 +1,5 @@
 # gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono0a/graph/words.txt exp/mono0a/final.mdl exp/mono0a/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split10/9/utt2spk scp:data/test/split10/9/cmvn.scp scp:data/test/split10/9/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:|gzip -c > exp/mono0a/decode/lat.9.gz" 
-# Started at Sun Dec  1 23:51:49 CST 2019
+# Started at Mon Dec  2 01:28:33 CST 2019
 #
 gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/mono0a/graph/words.txt exp/mono0a/final.mdl exp/mono0a/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split10/9/utt2spk scp:data/test/split10/9/cmvn.scp scp:data/test/split10/9/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:|gzip -c > exp/mono0a/decode/lat.9.gz' 
 apply-cmvn --utt2spk=ark:data/test/split10/9/utt2spk scp:data/test/split10/9/cmvn.scp scp:data/test/split10/9/feats.scp ark:- 
@@ -1699,8 +1699,8 @@ RK_ZA z
 LOG (gmm-latgen-faster[5.5.166~1-013489]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:289) Log-like per frame for utterance RK_ZA is -7.61111 over 89 frames.
 RK_ZB z 
 LOG (gmm-latgen-faster[5.5.166~1-013489]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:289) Log-like per frame for utterance RK_ZB is -7.39749 over 93 frames.
-LOG (gmm-latgen-faster[5.5.166~1-013489]:main():gmm-latgen-faster.cc:176) Time taken 16.4037s: real-time factor assuming 100 frames/sec is 0.0106365
+LOG (gmm-latgen-faster[5.5.166~1-013489]:main():gmm-latgen-faster.cc:176) Time taken 17.9045s: real-time factor assuming 100 frames/sec is 0.0116096
 LOG (gmm-latgen-faster[5.5.166~1-013489]:main():gmm-latgen-faster.cc:179) Done 847 utterances, failed for 0
 LOG (gmm-latgen-faster[5.5.166~1-013489]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -7.65349 over 154221 frames.
-# Accounting: time=16 threads=1
-# Ended (code 0) at Sun Dec  1 23:52:05 CST 2019, elapsed time 16 seconds
+# Accounting: time=18 threads=1
+# Ended (code 0) at Mon Dec  2 01:28:51 CST 2019, elapsed time 18 seconds

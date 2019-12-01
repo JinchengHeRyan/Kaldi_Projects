@@ -1,10 +1,10 @@
 # align-equal-compiled "ark:gunzip -c exp/mono0a/fsts.1.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/1/utt2spk scp:data/train/split32/1/cmvn.scp scp:data/train/split32/1/feats.scp ark:- | add-deltas  ark:- ark:- |" ark,t:- | gmm-acc-stats-ali --binary=true exp/mono0a/0.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/1/utt2spk scp:data/train/split32/1/cmvn.scp scp:data/train/split32/1/feats.scp ark:- | add-deltas  ark:- ark:- |" ark:- exp/mono0a/0.1.acc 
-# Started at Sun Dec  1 23:51:10 CST 2019
+# Started at Mon Dec  2 01:27:54 CST 2019
 #
 align-equal-compiled 'ark:gunzip -c exp/mono0a/fsts.1.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/1/utt2spk scp:data/train/split32/1/cmvn.scp scp:data/train/split32/1/feats.scp ark:- | add-deltas  ark:- ark:- |' ark,t:- 
 gmm-acc-stats-ali --binary=true exp/mono0a/0.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/1/utt2spk scp:data/train/split32/1/cmvn.scp scp:data/train/split32/1/feats.scp ark:- | add-deltas  ark:- ark:- |' ark:- exp/mono0a/0.1.acc 
-apply-cmvn --utt2spk=ark:data/train/split32/1/utt2spk scp:data/train/split32/1/cmvn.scp scp:data/train/split32/1/feats.scp ark:- 
 add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split32/1/utt2spk scp:data/train/split32/1/cmvn.scp scp:data/train/split32/1/feats.scp ark:- 
 apply-cmvn --utt2spk=ark:data/train/split32/1/utt2spk scp:data/train/split32/1/cmvn.scp scp:data/train/split32/1/feats.scp ark:- 
 add-deltas ark:- ark:- 
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance AC_81A avg. like is -103.572 over 109 frames.
@@ -20,4 +20,4 @@ LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 3
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -108.156 over 49916 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
 # Accounting: time=0 threads=1
-# Ended (code 0) at Sun Dec  1 23:51:10 CST 2019, elapsed time 0 seconds
+# Ended (code 0) at Mon Dec  2 01:27:54 CST 2019, elapsed time 0 seconds

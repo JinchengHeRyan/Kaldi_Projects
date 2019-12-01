@@ -203,7 +203,7 @@ steps/diagnostic/analyze_lats.sh --cmd utils/run.pl exp/mono0a/graph exp/mono0a/
 steps/diagnostic/analyze_lats.sh: see stats in exp/mono0a/decode/log/analyze_alignments.log
 Overall, lattice depth (10,50,90-percentile)=(1,1,2) and mean=1.4
 steps/diagnostic/analyze_lats.sh: see stats in exp/mono0a/decode/log/analyze_lattice_depth_stats.log
-steps/align_si.sh --nj 4 --cmd utils/run.pl data/train data/lang exp/mono0a exp/mono0a_ali
+steps/align_si.sh --boost-silence 1.25 --nj 16 --cmd utils/run.pl data/train data/lang exp/mono0a exp/mono0a_ali
 steps/align_si.sh: feature type is delta
 steps/align_si.sh: aligning data in data/train using model from exp/mono0a, putting alignments in exp/mono0a_ali
 steps/diagnostic/analyze_alignments.sh --cmd utils/run.pl data/lang exp/mono0a_ali
@@ -254,7 +254,8 @@ steps/train_deltas.sh: training pass 33
 steps/train_deltas.sh: training pass 34
 steps/diagnostic/analyze_alignments.sh --cmd utils/run.pl data/lang exp/tri1
 steps/diagnostic/analyze_alignments.sh: see stats in exp/tri1/log/analyze_alignments.log
-exp/tri1: nj=4 align prob=-89.73 over 4.17h [retry=0.0%, fail=0.0%] states=272 gauss=3008 tree-impr=5.79
+1 warnings in exp/tri1/log/align.*.*.log
+exp/tri1: nj=16 align prob=-89.74 over 4.17h [retry=0.0%, fail=0.0%] states=272 gauss=3009 tree-impr=5.79
 steps/train_deltas.sh: Done training system with delta+delta-delta features in exp/tri1
 0.000106796 0
 0.000408996 -0.000305104
@@ -272,6 +273,18 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < AH_74O8O12A 7 4 o o 8 o 1 2
 ---
 > AH_74O8O12A 7 4 o 8 o 1 2
+70c70
+< AH_OO47A o 4 7
+---
+> AH_OO47A o o 4 7
+85c85
+< AK_235OA 2 3 5 o o
+---
+> AK_235OA 2 3 5 o
+141c141
+< AK_O67O3A o 6 7 8 3
+---
+> AK_O67O3A o 6 7 o 3
 146c146
 < AK_OO21641A o 2 1 6 4 1
 ---
@@ -280,22 +293,22 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < AP_1121851A 1 1 2 o 1 8 5 1
 ---
 > AP_1121851A 1 1 2 1 8 5 1
-330c330
-< AT_413A 4 4 3
----
-> AT_413A 4 1 3
 394c394
 < BA_2597298A 2 5 9 7 2 o 9 8
 ---
 > BA_2597298A 2 5 9 7 2 9 8
-412c412
-< BA_4O662A 4 o o 6 6 2
+401c401
+< BA_3468927A 3 4 6 8 9 2 o 7
 ---
-> BA_4O662A 4 o 6 6 2
+> BA_3468927A 3 4 6 8 9 2 7
 429c429
 < BA_7976O5OA 7 9 7 6 o 5 o o
 ---
 > BA_7976O5OA 7 9 7 6 o 5 o
+447c447
+< BA_9Z3A 6 9 z 3
+---
+> BA_9Z3A 9 z 3
 462c462
 < BC_147OOA 1 4 7 o
 ---
@@ -312,12 +325,6 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < BJ_15O3456A 1 5 o o 3 4 5 6
 ---
 > BJ_15O3456A 1 5 o 3 4 5 6
-718,719c718,719
-< BJ_4A o
-< BJ_4B o
----
-> BJ_4A 4
-> BJ_4B 4
 870c870
 < BM_463255OA 4 6 3 2 5 5 o o
 ---
@@ -342,10 +349,18 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < BW_659954OA 6 5 9 9 5 4 o o
 ---
 > BW_659954OA 6 5 9 9 5 4 o
+1127c1127
+< BW_812O859A 8 1 2 o o 8 5 9
+---
+> BW_812O859A 8 1 2 o 8 5 9
 1141c1141
 < BW_O1OA o 1 o o
 ---
 > BW_O1OA o 1 o
+1146c1146
+< BW_OO468A o 4 6 8
+---
+> BW_OO468A o o 4 6 8
 1259c1259
 < CD_4O325A 4 o o 3 2 5
 ---
@@ -354,10 +369,18 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < CD_8O15A 8 1 5
 ---
 > CD_8O15A 8 o 1 5
+1343c1343
+< CE_5OA 5 o o
+---
+> CE_5OA 5 o
 1378c1378
 < CE_OOOA o o
 ---
 > CE_OOOA o o o
+1388c1388
+< CJ_14O1A 1 4 o o 1
+---
+> CJ_14O1A 1 4 o 1
 1449c1449
 < CJ_O274OA o 2 7 4 o o
 ---
@@ -374,6 +397,10 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < CS_34O7O83A 3 4 o o 7 o 8 3
 ---
 > CS_34O7O83A 3 4 o 7 o 8 3
+1609c1609
+< CS_OOOA o o
+---
+> CS_OOOA o o o
 1650c1650
 < CT_5OO9O49A 5 o 9 o 4 9
 ---
@@ -382,10 +409,6 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < DF_27A 2 o 7
 ---
 > DF_27A 2 7
-1724c1724
-< DF_5693ZA 5 6 o 9 3 z
----
-> DF_5693ZA 5 6 9 3 z
 1881c1881
 < DP_5OO31O6A 5 o 3 1 o 6
 ---
@@ -394,10 +417,6 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < DW_Z587Z1ZA z o 5 8 7 z 1 z
 ---
 > DW_Z587Z1ZA z 5 8 7 z 1 z
-2190c2190
-< EF_5OA 5 o o
----
-> EF_5OA 5 o
 2243c2243
 < EJ_26OA 2 o 6 o
 ---
@@ -406,24 +425,14 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < EJ_422A 4 2 o 2
 ---
 > EJ_422A 4 2 2
-2262c2262
-< EJ_5248A 5 2 o 4 8
----
-> EJ_5248A 5 2 4 8
-2311,2312c2311,2312
+2311c2311
 < EM_1327ZA 1 3 2 7 z o
-< EM_16824A 1 6 8 2 4 o
 ---
 > EM_1327ZA 1 3 2 7 z
-> EM_16824A 1 6 8 2 4
-2317,2319c2317,2319
-< EM_21Z34A 2 1 z 3 4 o
+2318c2318
 < EM_236A 2 o 3 6
-< EM_2773161A 2 o 7 7 3 1 6 1
 ---
-> EM_21Z34A 2 1 z 3 4
 > EM_236A 2 3 6
-> EM_2773161A 2 7 7 3 1 6 1
 2324c2324
 < EM_3296O68A 3 2 o 9 6 o 6 8
 ---
@@ -448,22 +457,10 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < EM_6694A 6 6 9 4 o
 ---
 > EM_6694A 6 6 9 4
-2382c2382
-< EM_Z93A z o 9 3
----
-> EM_Z93A z 9 3
-2384c2384
-< EM_ZB z o
----
-> EM_ZB z
 2402c2402
 < EP_338A 3 3 8 8
 ---
 > EP_338A 3 3 8
-2414c2414
-< EP_4O6O965A 4 o o 6 o 9 6 5
----
-> EP_4O6O965A 4 o 6 o 9 6 5
 2420c2420
 < EP_5OA 5 o o
 ---
@@ -472,6 +469,10 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < ER_2OOA 2 o
 ---
 > ER_2OOA 2 o o
+2564c2564
+< ET_45O2426A 4 5 o o 2 4 2 6
+---
+> ET_45O2426A 4 5 o 2 4 2 6
 2610c2610
 < ET_OO8O3A o 8 o 3
 ---
@@ -484,10 +485,6 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < EW_75OA 7 5 o o
 ---
 > EW_75OA 7 5 o
-2718c2718
-< FA_45OA 4 5 o o
----
-> FA_45OA 4 5 o
 2731c2731
 < FA_64O23O8A 6 4 o o 2 3 o 8
 ---
@@ -500,18 +497,6 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < FN_2O26OA 2 o o 2 6 o
 ---
 > FN_2O26OA 2 o 2 6 o
-3024c3024
-< FN_454OOA 4 5 4 o o o
----
-> FN_454OOA 4 5 4 o o
-3037c3037
-< FN_5O5O856A 5 o o 5 o o 8 5 6
----
-> FN_5O5O856A 5 o 5 o 8 5 6
-3041c3041
-< FN_6787ZA 6 7 o 8 7 z
----
-> FN_6787ZA 6 7 8 7 z
 3045c3045
 < FN_738A 7 3 o 8
 ---
@@ -529,7 +514,7 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 ---
 > FP_42775A 4 2 7 7 5
 3124c3124
-< FP_782O7OOA 7 8 2 o 7 o
+< FP_782O7OOA 7 8 2 o o 7 o
 ---
 > FP_782O7OOA 7 8 2 o 7 o o
 3150,3151c3150,3151
@@ -538,6 +523,10 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 ---
 > FP_Z268224A z 2 6 8 2 2 4
 > FP_Z314723A z 3 1 4 7 2 3
+3192c3192
+< FR_617OOA 6 1 7 o
+---
+> FR_617OOA 6 1 7 o o
 3279c3279
 < FS_78414A 7 4 1 4
 ---
@@ -554,18 +543,16 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < FT_Z2551A z 2 o 5 5 1
 ---
 > FT_Z2551A z 2 5 5 1
-3395,3399c3395,3399
+3395,3398c3395,3398
 < GA_21Z1A 2 o 1 z 1
 < GA_26Z8A 2 o 6 z 8
 < GA_2762A 2 o 7 6 2
 < GA_281O24OA 2 8 1 o 2 4
-< GA_29A 2 o 9
 ---
 > GA_21Z1A 2 1 z 1
 > GA_26Z8A 2 6 z 8
 > GA_2762A 2 7 6 2
 > GA_281O24OA 2 8 1 o 2 4 o
-> GA_29A 2 9
 3413c3413
 < GA_4A o
 ---
@@ -614,11 +601,9 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < GN_2O8OO38A 2 o 8 o 3 8
 ---
 > GN_2O8OO38A 2 o 8 o o 3 8
-3865,3866c3865,3866
-< GN_34O4573A 3 4 o o 4 5 7 3
+3866c3866
 < GN_35OA 3 5 o o
 ---
-> GN_34O4573A 3 4 o 4 5 7 3
 > GN_35OA 3 5 o
 3897c3897
 < GN_7OO94A 7 o 9 4
@@ -628,16 +613,16 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < GN_9586A 9 5 o 8 6
 ---
 > GN_9586A 9 5 8 6
+4068c4068
+< GS_O4O16A o 4 o o 1 6
+---
+> GS_O4O16A o 4 o 1 6
 4081,4082c4081,4082
 < GW_143A 1 o 4 3
 < GW_149A 1 o 4 9
 ---
 > GW_143A 1 4 3
 > GW_149A 1 4 9
-4089c4089
-< GW_23252A 2 o 3 2 5 2
----
-> GW_23252A 2 3 2 5 2
 4096c4096
 < GW_324163ZA 3 8 2 4 1 6 3 8 z
 ---
@@ -648,30 +633,34 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 ---
 > GW_4ZZ7Z3ZA 4 z z 7 z 3 z
 > GW_546A 5 4 6
+4130c4130
+< GW_812Z276A 8 1 2 o z 2 7 6
+---
+> GW_812Z276A 8 1 2 z 2 7 6
 4138,4139c4138,4139
 < GW_9231518A 9 2 o 3 8 1 5 1 8
-< GW_9345356A 9 o 3 4 5 3 8 5 6
+< GW_9345356A 9 3 4 5 3 8 5 6
 ---
 > GW_9231518A 9 2 3 1 5 1 8
 > GW_9345356A 9 3 4 5 3 5 6
-4249c4249
-< HF_32Z94A 3 2 z o 9 4
+4178c4178
+< HC_3OO3184A 3 o 3 1 8 4
 ---
-> HF_32Z94A 3 2 z 9 4
-4252c4252
-< HF_38O55O3A 3 8 o 5 5 o o 3
+> HC_3OO3184A 3 o o 3 1 8 4
+4256c4256
+< HF_4153586A 4 1 5 3 5 8 8 6
 ---
-> HF_38O55O3A 3 8 o 5 5 o 3
+> HF_4153586A 4 1 5 3 5 8 6
 4279c4279
 < HF_765ZA 7 6 o 5 z
 ---
 > HF_765ZA 7 6 5 z
-4292c4292
-< HF_92O46A 9 2 o o 4 6
+4287c4287
+< HF_883181ZA 8 8 3 o 1 8 1 z
 ---
-> HF_92O46A 9 2 o 4 6
+> HF_883181ZA 8 8 3 1 8 1 z
 4295c4295
-< HF_98ZZ867A 9 8 z z o 8 6 7
+< HF_98ZZ867A 9 8 z o z 8 6 7
 ---
 > HF_98ZZ867A 9 8 z z 8 6 7
 4389,4390c4389,4390
@@ -693,7 +682,7 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < HM_2B 2 o
 < HM_2O27869A 2 o o 2 o 7 8 6 9 8
 < HM_314OA 3 1 4 o o
-< HM_37O21A 3 z 1 o 2 o 1
+< HM_37O21A 3 z 1 o o 1
 ---
 > HM_25ZZ8A 2 5 z z 8
 > HM_268A 2 6 8
@@ -713,7 +702,7 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 > HM_3ZZA 3 z z
 > HM_42A 4 2
 4412c4412
-< HM_4966O97A 4 9 6 6 o 9 7 8
+< HM_4966O97A 4 9 6 6 o o 9 7 8
 ---
 > HM_4966O97A 4 9 6 6 o 9 7
 4415c4415
@@ -725,7 +714,7 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 ---
 > HM_58OA 5 8 o
 4423,4426c4423,4426
-< HM_5OO4O32A 5 o o o 4 o o 3 8 2 o
+< HM_5OO4O32A 5 o o 4 o o 3 8 2 o
 < HM_6236A 6 2 o 3 6
 < HM_63524A 6 3 5 2 o 4 o
 < HM_659OA 6 5 9 o o
@@ -734,36 +723,28 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 > HM_6236A 6 2 3 6
 > HM_63524A 6 3 5 2 4
 > HM_659OA 6 5 9 o
-4430,4432c4430,4432
-< HM_6O67A 6 o 6 7 o
+4430,4431c4430,4431
+< HM_6O67A 6 o 6 7 8
 < HM_713453OA 7 1 3 4 5 3 o o
-< HM_7729A 7 7 2 o 9
 ---
 > HM_6O67A 6 o 6 7
 > HM_713453OA 7 1 3 4 5 3 o
-> HM_7729A 7 7 2 9
-4434c4434
-< HM_798188OA 7 9 8 1 8 8 o o
----
-> HM_798188OA 7 9 8 1 8 8 o
-4438,4439c4438,4439
+4438,4441c4438,4441
 < HM_823A 8 2 o 3
 < HM_8258146A 8 2 o 5 8 1 4 6
+< HM_85ZZA 8 5 z o z o
+< HM_8628ZA 8 6 2 8 z o
 ---
 > HM_823A 8 2 3
 > HM_8258146A 8 2 5 8 1 4 6
-4441c4441
-< HM_8628ZA 8 6 2 8 z o o
----
+> HM_85ZZA 8 5 z z
 > HM_8628ZA 8 6 2 8 z
-4445,4446c4445,4446
+4445c4445
 < HM_92228A 9 2 2 o 2 8
-< HM_94498A 9 4 4 9 8 o
 ---
 > HM_92228A 9 2 2 2 8
-> HM_94498A 9 4 4 9 8
 4453c4453
-< HM_O5129A o 5 1 2 o 9
+< HM_O5129A o 5 1 2 1 9
 ---
 > HM_O5129A o 5 1 2 9
 4455c4455
@@ -772,18 +753,14 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 > HM_O89A o 8 9
 4458,4459c4458,4459
 < HM_OOA o o o
-< HM_Z2ZZ7A z 2 o z z 7
+< HM_Z2ZZ7A z 2 o z o z 7
 ---
 > HM_OOA o o
 > HM_Z2ZZ7A z 2 z z 7
-4462c4462
-< HM_Z94761ZA z 9 4 7 6 1 z o
+4465c4465
+< HM_ZB z o
 ---
-> HM_Z94761ZA z 9 4 7 6 1 z
-4506c4506
-< HR_6OO73A 6 o 7 3
----
-> HR_6OO73A 6 o o 7 3
+> HM_ZB z
 4527c4527
 < HR_9OO3584A 9 o 3 5 8 4
 ---
@@ -792,14 +769,6 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < IA_47OO4A 4 7 o 4
 ---
 > IA_47OO4A 4 7 o o 4
-4658c4658
-< IB_68748OOA 6 8 7 4 8 o
----
-> IB_68748OOA 6 8 7 4 8 o o
-4731c4731
-< ID_5Z96Z8ZA 5 7 9 6 z 8 z
----
-> ID_5Z96Z8ZA 5 z 9 6 z 8 z
 4789c4789
 < II_36O4OA 3 6 o 4 o o
 ---
@@ -824,6 +793,10 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < IW_8268A 8 2 o 6 8
 ---
 > IW_8268A 8 2 6 8
+5175c5175
+< JD_35833A 3 5 8 8 3
+---
+> JD_35833A 3 5 8 3 3
 5192c5192
 < JD_5OO89A 5 o 8 9
 ---
@@ -833,7 +806,7 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 ---
 > JD_OO3A o o 3
 5469c5469
-< KA_122A 1 2 2 o
+< KA_122A 1 2 o
 ---
 > KA_122A 1 2 2
 5474,5475c5474,5475
@@ -844,7 +817,7 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 > KA_2579A 2 5 7 9
 5479,5482c5479,5482
 < KA_2B 2 o
-< KA_2O32A 2 o o 3 2 o
+< KA_2O32A 2 o 3 2 o
 < KA_31O2A 3 1 o 2 o
 < KA_32A 3 2 o
 ---
@@ -852,9 +825,15 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 > KA_2O32A 2 o 3 2
 > KA_31O2A 3 1 o 2
 > KA_32A 3 2
-5491c5491
+5484c5484
+< KA_38A 3 8 8
+---
+> KA_38A 3 8
+5490,5491c5490,5491
+< KA_47849A 4 7 8 o 9
 < KA_47A 5 7
 ---
+> KA_47849A 4 7 8 4 9
 > KA_47A 4 7
 5493c5493
 < KA_4B o o
@@ -865,29 +844,23 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 ---
 > KA_5282A 5 2 8 2
 5502c5502
-< KA_64O9451A 6 4 o o 9 4 5 1
+< KA_64O9451A 6 o o 9 4 5 1
 ---
 > KA_64O9451A 6 4 o 9 4 5 1
-5518c5518
-< KA_8622A 8 6 2 2 o
----
-> KA_8622A 8 6 2 2
-5522,5524c5522,5524
+5522,5525c5522,5525
 < KA_8O1O2A 8 o 1 o 2 o
 < KA_91421A 9 1 4 2 o 1
 < KA_92O1648A 9 2 o o 1 6 4 8
+< KA_93421A 9 3 4 2 o 1
 ---
 > KA_8O1O2A 8 o 1 o 2
 > KA_91421A 9 1 4 2 1
 > KA_92O1648A 9 2 o 1 6 4 8
+> KA_93421A 9 3 4 2 1
 5531c5531
 < KA_O72A o 7 2 o
 ---
 > KA_O72A o 7 2
-5575c5575
-< KB_58O4OA 5 8 8 o 4 o
----
-> KB_58O4OA 5 8 o 4 o
 5670c5670
 < KE_824OA 8 2 4 o o
 ---
@@ -900,66 +873,52 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < KG_4595OA 4 5 9 5 o o
 ---
 > KG_4595OA 4 5 9 5 o
-5867,5868c5867,5868
-< LE_336ZZA 3 2 6 z z
+5868c5868
 < LE_3548262A 2 5 4 2 2 6 2
 ---
-> LE_336ZZA 3 3 6 z z
 > LE_3548262A 3 5 4 8 2 6 2
 5877c5877
 < LE_46OOA 4 6 o
 ---
 > LE_46OOA 4 6 o o
-5902c5902
+5901,5902c5901,5902
+< LE_823O899A 2 2 3 o 8 9 9
 < LE_83ZA 2 3 z
 ---
+> LE_823O899A 8 2 3 o 8 9 9
 > LE_83ZA 8 3 z
-5918c5918
-< LE_O8A 4 8
----
-> LE_O8A o 8
 5992c5992
 < LG_O4O2OA o 4 o o 2 o
 ---
 > LG_O4O2OA o 4 o 2 o
-6027c6027
-< LJ_4334OA 4 3 3 4 o o
----
-> LJ_4334OA 4 3 3 4 o
 6039c6039
 < LJ_5B 5 o
 ---
 > LJ_5B 5
-6111c6111
+6110,6111c6110,6111
+< LL_4OA 4 o o
 < LL_51A 5 o 1
 ---
+> LL_4OA 4 o
 > LL_51A 5 1
-6119c6119
-< LL_645Z2ZZA 6 4 5 8 z 2 z z
----
-> LL_645Z2ZZA 6 4 5 z 2 z z
 6122c6122
-< LL_6O9O4O2A 6 o 9 o o 4 o o 2
+< LL_6O9O4O2A 6 o 9 o 4 o o 2
 ---
 > LL_6O9O4O2A 6 o 9 o 4 o 2
-6134c6134
-< LL_85O38A 8 5 o o 3 8
----
-> LL_85O38A 8 5 o 3 8
-6148c6148
-< LL_O524955A o o 5 2 4 9 5 5
----
-> LL_O524955A o 5 2 4 9 5 5
 6160c6160
 < LP_1247349A 1 2 4 o 7 3 4 9
 ---
 > LP_1247349A 1 2 4 7 3 4 9
 6187,6188c6187,6188
 < LP_4OA 4 o o
-< LP_524Z318A 5 2 o 4 z 3 1 8
+< LP_524Z318A 5 2 o 4 o z 3 1 8
 ---
 > LP_4OA 4 o
 > LP_524Z318A 5 2 4 z 3 1 8
+6208c6208
+< LP_7OO5A 7 o o o 5
+---
+> LP_7OO5A 7 o o 5
 6217c6217
 < LP_94O1423A 9 4 o o 1 4 2 3
 ---
@@ -984,6 +943,10 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < MI_885358ZA 8 5 3 5 8 z
 ---
 > MI_885358ZA 8 8 5 3 5 8 z
+6553c6553
+< ML_24O2A 2 4 o o 2
+---
+> ML_24O2A 2 4 o 2
 6603c6603
 < ML_94O3O45A 9 4 o o 3 8 o 4 5
 ---
@@ -996,10 +959,6 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < NK_4O161A 4 o o 1 6 1
 ---
 > NK_4O161A 4 o 1 6 1
-6762c6762
-< NK_O5O27A o 5 o o 2 7
----
-> NK_O5O27A o 5 o 2 7
 6784c6784
 < NL_2318A 2 o 3 1 8
 ---
@@ -1008,26 +967,22 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < NL_734OA 7 3 4 o o
 ---
 > NL_734OA 7 3 4 o
-6875c6875
-< NP_445OA 4 4 5 o o
----
-> NP_445OA 4 4 5 o
 6926c6926
 < NP_Z48Z284A z 4 8 z o 2 8 4
 ---
 > NP_Z48Z284A z 4 8 z 2 8 4
-6972c6972
-< NT_719OOA 7 1 9 o
+7078c7078
+< PC_Z584A z 5 o 8 4
 ---
-> NT_719OOA 7 1 9 o o
+> PC_Z584A z 5 8 4
+7098c7098
+< PF_35Z13A 3 8 5 z 1 3
+---
+> PF_35Z13A 3 5 z 1 3
 7111c7111
 < PF_4O5OOA 4 o o 5 o o
 ---
 > PF_4O5OOA 4 o 5 o o
-7169c7169
-< PG_2181559A 2 o 1 8 1 5 5 9
----
-> PG_2181559A 2 1 8 1 5 5 9
 7175c7175
 < PG_35OA 3 5 o o
 ---
@@ -1036,10 +991,6 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < PG_3O315A 3 o 3 8 1 5
 ---
 > PG_3O315A 3 o 3 1 5
-7183c7183
-< PG_42OA 4 2 o o
----
-> PG_42OA 4 2 o
 7204c7204
 < PG_724OA 7 2 4 o o
 ---
@@ -1053,7 +1004,7 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 ---
 > PH_OB o
 7324c7324
-< PJ_28O4OA 2 8 o 4 o o
+< PJ_28O4OA 2 o 8 o 4 o o
 ---
 > PJ_28O4OA 2 8 o 4 o
 7331c7331
@@ -1064,10 +1015,6 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < PJ_45OA 4 5 o o
 ---
 > PJ_45OA 4 5 o
-7457c7457
-< PL_OA o o
----
-> PL_OA o
 7459c7459
 < PL_OO49A o 4 9
 ---
@@ -1080,10 +1027,6 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < PN_63OOA 6 3 o
 ---
 > PN_63OOA 6 3 o o
-7533c7533
-< PN_O75O3A o 7 5 8 3
----
-> PN_O75O3A o 7 5 o 3
 7558c7558
 < PR_2OOA 2 o
 ---
@@ -1092,22 +1035,22 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < PR_479994OA 4 7 9 9 9 4 o o
 ---
 > PR_479994OA 4 7 9 9 9 4 o
-7615c7615
-< PR_OO7A o 7
----
-> PR_OO7A o o 7
 7649c7649
 < PT_4OA 4 o o
 ---
 > PT_4OA 4 o
+7677c7677
+< PT_8OO7561A 8 o 7 5 6 1
+---
+> PT_8OO7561A 8 o o 7 5 6 1
 7720c7720
 < RG_3ZA 3 8 z
 ---
 > RG_3ZA 3 z
-7769c7769
-< RG_OOO824OA o o o 8 2 4 o o
+7726c7726
+< RG_4O14A 4 o o 1 4
 ---
-> RG_OOO824OA o o o 8 2 4 o
+> RG_4O14A 4 o 1 4
 7846c7846
 < RK_OOO2OA o o 2 o
 ---
@@ -1152,10 +1095,16 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < SL_OOO6O56A o o 6 o 5 6
 ---
 > SL_OOO6O56A o o o 6 o 5 6
-8256c8256
+8244c8244
+< SM_1O42O73A 1 4 2 8 7 3
+---
+> SM_1O42O73A 1 o 4 2 o 7 3
+8256,8257c8256,8257
 < SM_37OO5A 3 7 o 5
+< SM_382812OA 3 8 8 2 8 1 2 o
 ---
 > SM_37OO5A 3 7 o o 5
+> SM_382812OA 3 8 2 8 1 2 o
 8266c8266
 < SM_4O484A 4 o o 4 8 4
 ---
@@ -1164,10 +1113,6 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < SM_5OOOA 5 o
 ---
 > SM_5OOOA 5 o o o
-8381c8381
-< SN_O883OA o o 8 8 3 o
----
-> SN_O883OA o 8 8 3 o
 8407c8407
 < SR_3261646A 3 2 6 8 1 6 4 6
 ---
@@ -1192,15 +1137,9 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < TB_OO85346A o 8 5 3 4 6
 ---
 > TB_OO85346A o o 8 5 3 4 6
-8681c8681
-< TC_946Z9A 9 4 6 o z 9
----
-> TC_946Z9A 9 4 6 z 9
-8692,8693c8692,8693
-< TC_OO6O5A o 6 o 5
+8693c8693
 < TC_OOO4611A o o 4 6 1 1
 ---
-> TC_OO6O5A o o 6 o 5
 > TC_OOO4611A o o o 4 6 1 1
 %WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
-%WER exp/tri1/decode/wer_19:%SER 2.93 [ 255 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 2.74 [ 238 / 8700 ]

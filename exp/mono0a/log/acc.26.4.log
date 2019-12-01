@@ -1,9 +1,9 @@
 # gmm-acc-stats-ali exp/mono0a/26.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/4/utt2spk scp:data/train/split32/4/cmvn.scp scp:data/train/split32/4/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:gunzip -c exp/mono0a/ali.4.gz|" exp/mono0a/26.4.acc 
-# Started at Sun Dec  1 23:51:36 CST 2019
+# Started at Mon Dec  2 01:28:21 CST 2019
 #
 gmm-acc-stats-ali exp/mono0a/26.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/4/utt2spk scp:data/train/split32/4/cmvn.scp scp:data/train/split32/4/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:gunzip -c exp/mono0a/ali.4.gz|' exp/mono0a/26.4.acc 
-apply-cmvn --utt2spk=ark:data/train/split32/4/utt2spk scp:data/train/split32/4/cmvn.scp scp:data/train/split32/4/feats.scp ark:- 
 add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split32/4/utt2spk scp:data/train/split32/4/cmvn.scp scp:data/train/split32/4/feats.scp ark:- 
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance BR_8124A avg. like is -91.4457 over 214 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance CA_425694OA avg. like is -93.8123 over 294 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance CA_Z6ZA avg. like is -91.2182 over 246 frames.
@@ -12,5 +12,5 @@ LOG (apply-cmvn[5.5.166~1-013489]:main():apply-cmvn.cc:162) Applied cepstral mea
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 231 files, 0 with errors.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -91.2716 over 46851 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
-# Accounting: time=1 threads=1
-# Ended (code 0) at Sun Dec  1 23:51:37 CST 2019, elapsed time 1 seconds
+# Accounting: time=0 threads=1
+# Ended (code 0) at Mon Dec  2 01:28:21 CST 2019, elapsed time 0 seconds
