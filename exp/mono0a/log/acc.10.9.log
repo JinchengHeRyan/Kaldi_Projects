@@ -1,18 +1,18 @@
 # gmm-acc-stats-ali exp/mono0a/10.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/9/utt2spk scp:data/train/split32/9/cmvn.scp scp:data/train/split32/9/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:gunzip -c exp/mono0a/ali.9.gz|" exp/mono0a/10.9.acc 
-# Started at Sun Dec  1 21:58:23 CST 2019
+# Started at Sun Dec  1 23:51:22 CST 2019
 #
 gmm-acc-stats-ali exp/mono0a/10.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/9/utt2spk scp:data/train/split32/9/cmvn.scp scp:data/train/split32/9/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:gunzip -c exp/mono0a/ali.9.gz|' exp/mono0a/10.9.acc 
 apply-cmvn --utt2spk=ark:data/train/split32/9/utt2spk scp:data/train/split32/9/cmvn.scp scp:data/train/split32/9/feats.scp ark:- 
 add-deltas ark:- ark:- 
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance EI_847OOA avg. like is -95.0288 over 260 frames.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance EK_449A avg. like is -91.3606 over 173 frames.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance EK_Z747A avg. like is -97.0362 over 175 frames.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 200 utterances; for utterance EL_78579A avg. like is -92.6013 over 230 frames.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 250 utterances; for utterance ES_3A avg. like is -94.8711 over 86 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance EI_847OOA avg. like is -93.3124 over 260 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance EK_449A avg. like is -90.3281 over 173 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance EK_Z747A avg. like is -95.2905 over 175 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 200 utterances; for utterance EL_78579A avg. like is -90.2752 over 230 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 250 utterances; for utterance ES_3A avg. like is -93.6907 over 86 frames.
 LOG (apply-cmvn[5.5.166~1-013489]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 308 utterances, errors on 0
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 300 utterances; for utterance ES_OA avg. like is -86.2757 over 84 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 300 utterances; for utterance ES_OA avg. like is -86.9482 over 84 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 308 files, 0 with errors.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -94.4372 over 52856 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -92.5436 over 52856 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
 # Accounting: time=0 threads=1
-# Ended (code 0) at Sun Dec  1 21:58:23 CST 2019, elapsed time 0 seconds
+# Ended (code 0) at Sun Dec  1 23:51:22 CST 2019, elapsed time 0 seconds

@@ -1,5 +1,5 @@
 # gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false "gmm-boost-silence --boost=1.0 1 exp/mono0a/4.mdl - |" "ark:gunzip -c exp/mono0a/fsts.7.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/7/utt2spk scp:data/train/split32/7/cmvn.scp scp:data/train/split32/7/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark,t:|gzip -c >exp/mono0a/ali.7.gz" 
-# Started at Sun Dec  1 21:58:11 CST 2019
+# Started at Sun Dec  1 23:51:14 CST 2019
 #
 gmm-align-compiled --transition-scale=1.0 --acoustic-scale=0.1 --self-loop-scale=0.1 --beam=10 --retry-beam=40 --careful=false 'gmm-boost-silence --boost=1.0 1 exp/mono0a/4.mdl - |' 'ark:gunzip -c exp/mono0a/fsts.7.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/7/utt2spk scp:data/train/split32/7/cmvn.scp scp:data/train/split32/7/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark,t:|gzip -c >exp/mono0a/ali.7.gz' 
 gmm-boost-silence --boost=1.0 1 exp/mono0a/4.mdl - 
@@ -14,24 +14,18 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_1
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_1A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_1B
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_1O863O4A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_1O863O4A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_26A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_28797A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_28797A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_299A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_2A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_2B
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_2O224A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_2O224A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_2Z9A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_33A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_33OO3A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_33OO3A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_3544827A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_3544827A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_35OOO58A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_39Z8A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_39Z8A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_3A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_3B
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_428A
@@ -56,7 +50,6 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_6
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_6B
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_6ZA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_7156A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_7156A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_72A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_739O712A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_7A
@@ -71,7 +64,6 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_8
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_8O74A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_8Z25898A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_92121A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_92121A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_9276A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_94OA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_96A
@@ -79,19 +71,15 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_9
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_9B
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_9Z2A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_O1A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_O1A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_O1OO2A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_O1OO2A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_O34O6A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_O852A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_O852A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_O93A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_OA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_OB
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_Z136A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_Z3ZZ538A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_Z4593Z1A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DL_Z4593Z1A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_Z78A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_ZA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DL_ZB
@@ -108,7 +96,6 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_2
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_2731497A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_278OA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_2999O94A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DN_2999O94A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_2A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_2B
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_34A
@@ -148,7 +135,6 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_7
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_7Z6Z221A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_81A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_84OO77OA
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance DN_84OO77OA with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_8826A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_891ZA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_8A
@@ -176,7 +162,6 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_Z
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_ZB
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) DN_ZZ94A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_11OO9A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance EA_11OO9A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_13A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_1642A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_1712A
@@ -184,7 +169,6 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_1
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_1B
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_1Z51A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_21382A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance EA_21382A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_2341484A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_243A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_265A
@@ -200,7 +184,6 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_3
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_3Z7Z222A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_426A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_4472128A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance EA_4472128A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_474OA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_493A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_4A
@@ -221,11 +204,8 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_6
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_6O2A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_6Z11ZA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_7154O49A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance EA_7154O49A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_738O3A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance EA_738O3A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_73O74O1A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance EA_73O74O1A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_79O33A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_7A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_7B
@@ -244,9 +224,7 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_9
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_9B
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_9O56A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_9ZZ8A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance EA_9ZZ8A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_O1A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance EA_O1A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_O482A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_O5781A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_O6959A
@@ -254,7 +232,6 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_O
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_OA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_OB
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_Z187529A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance EA_Z187529A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_Z29A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_Z3A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EA_Z875A
@@ -332,7 +309,6 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EC_O
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EC_OA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EC_OB
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EC_OO9O4O1A
-WARNING (gmm-align-compiled[5.5.166~1-013489]:AlignUtteranceWrapper():decoder-wrappers.cc:501) Retrying utterance EC_OO9O4O1A with beam 40
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EC_Z1A
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EC_Z1ZA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EC_Z583668A
@@ -340,8 +316,8 @@ LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EC_Z
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EC_ZA
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EC_ZB
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:127) EC_ZZA
-LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:135) Overall log-likelihood per frame is -98.6322 over 51383 frames.
-LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:137) Retried 24 out of 308 utterances.
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:135) Overall log-likelihood per frame is -96.1791 over 51383 frames.
+LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:137) Retried 0 out of 308 utterances.
 LOG (gmm-align-compiled[5.5.166~1-013489]:main():gmm-align-compiled.cc:139) Done 308, errors on 0
 # Accounting: time=1 threads=1
-# Ended (code 0) at Sun Dec  1 21:58:12 CST 2019, elapsed time 1 seconds
+# Ended (code 0) at Sun Dec  1 23:51:15 CST 2019, elapsed time 1 seconds

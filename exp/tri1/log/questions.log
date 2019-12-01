@@ -1,17 +1,2 @@
 cluster-phones exp/tri1/treeacc data/lang/phones/sets.int exp/tri1/questions.int 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 2 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 3 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 4 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 5 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 6 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 7 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 8 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 11 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 12 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 14 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 15 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 17 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 18 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 19 
-WARNING (cluster-phones[5.5.166~1-013489]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 20 
 LOG (cluster-phones[5.5.166~1-013489]:main():cluster-phones.cc:129) Wrote questions to exp/tri1/questions.int

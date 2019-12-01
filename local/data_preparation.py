@@ -15,9 +15,9 @@ def create_text_file():
 
 
 def word_dict():
-    words_dict = {'1': "ONE", '2': "TWO", '3': "THREE", '4': "FOUR", '5': "FIVE", '6': "SIX", '7': "SEVEN",
-                  '8': "EIGHT",
-                  '9': "NINE", 'Z': "ZERO", 'O': "OH"}
+    words_dict = {'1': "1", '2': "2", '3': "3", '4': "4", '5': "5", '6': "6", '7': "7",
+                  '8': "8",
+                  '9': "9", 'Z': "z", 'O': "o"}
     return words_dict
 
 

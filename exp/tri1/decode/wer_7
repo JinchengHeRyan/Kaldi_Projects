@@ -1,4 +1,4 @@
 compute-wer --text --mode=present ark:data/test/text ark,p:- 
-%WER 101.20 [ 28925 / 28583, 342 ins, 315 del, 28268 sub ]
-%SER 100.00 [ 8700 / 8700 ]
+%WER 2.31 [ 659 / 28583, 623 ins, 19 del, 17 sub ]
+%SER 6.60 [ 574 / 8700 ]
 Scored 8700 sentences, 0 not present in hyp.

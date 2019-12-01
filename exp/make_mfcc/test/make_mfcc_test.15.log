@@ -1,8 +1,8 @@
 # compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.15.scp ark:- | copy-feats --compress=true ark:- ark,scp:/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_test.15.ark,/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_test.15.scp 
-# Started at Sun Dec  1 21:57:59 CST 2019
+# Started at Sun Dec  1 23:51:03 CST 2019
 #
-compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.15.scp ark:- 
 copy-feats --compress=true ark:- ark,scp:/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_test.15.ark,/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_test.15.scp 
+compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.15.scp ark:- 
 VLOG[2] (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:173) Processed features for key PR_OO7A
 VLOG[2] (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:173) Processed features for key PR_Z1A
 VLOG[2] (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:173) Processed features for key PR_Z418874A
@@ -603,4 +603,4 @@ VLOG[2] (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:173) 
 LOG (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:176)  Done 543 out of 543 utterances.
 LOG (copy-feats[5.5.166~1-013489]:main():copy-feats.cc:143) Copied 543 feature matrices.
 # Accounting: time=6 threads=1
-# Ended (code 0) at Sun Dec  1 21:58:05 CST 2019, elapsed time 6 seconds
+# Ended (code 0) at Sun Dec  1 23:51:09 CST 2019, elapsed time 6 seconds
