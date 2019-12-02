@@ -1,5 +1,5 @@
 # lattice-best-path --lm-scale=9 --word-symbol-table=exp/tri1/graph/words.txt "ark:gunzip -c exp/tri1/decode/lat.*.gz|" ark,t:exp/tri1/decode/scoring/9.tra 
-# Started at Mon Dec  2 01:29:59 CST 2019
+# Started at Mon Dec  2 13:40:33 CST 2019
 #
 lattice-best-path --lm-scale=9 --word-symbol-table=exp/tri1/graph/words.txt 'ark:gunzip -c exp/tri1/decode/lat.*.gz|' ark,t:exp/tri1/decode/scoring/9.tra 
 LOG (lattice-best-path[5.5.166~1-013489]:main():lattice-best-path.cc:99) For utterance AH_111A, best cost 177.91 + 11556.6 = 11734.5 over 136 frames.
@@ -17405,4 +17405,4 @@ RK_ZB z
 LOG (lattice-best-path[5.5.166~1-013489]:main():lattice-best-path.cc:124) Overall cost per frame is 90.858 = 1.20016 [graph] + 89.6578 [acoustic] over 1522431 frames.
 LOG (lattice-best-path[5.5.166~1-013489]:main():lattice-best-path.cc:128) Done 8700 lattices, failed for 0
 # Accounting: time=1 threads=1
-# Ended (code 0) at Mon Dec  2 01:30:00 CST 2019, elapsed time 1 seconds
+# Ended (code 0) at Mon Dec  2 13:40:34 CST 2019, elapsed time 1 seconds

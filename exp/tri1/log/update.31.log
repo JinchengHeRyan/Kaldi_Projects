@@ -1,5 +1,5 @@
 # gmm-est --mix-up=3000 --power=0.25 --write-occs=exp/tri1/32.occs exp/tri1/31.mdl "gmm-sum-accs - exp/tri1/31.*.acc |" exp/tri1/32.mdl 
-# Started at Mon Dec  2 01:29:17 CST 2019
+# Started at Mon Dec  2 13:39:51 CST 2019
 #
 gmm-est --mix-up=3000 --power=0.25 --write-occs=exp/tri1/32.occs exp/tri1/31.mdl 'gmm-sum-accs - exp/tri1/31.*.acc |' exp/tri1/32.mdl 
 gmm-sum-accs - exp/tri1/31.1.acc exp/tri1/31.10.acc exp/tri1/31.11.acc exp/tri1/31.12.acc exp/tri1/31.13.acc exp/tri1/31.14.acc exp/tri1/31.15.acc exp/tri1/31.16.acc exp/tri1/31.2.acc exp/tri1/31.3.acc exp/tri1/31.4.acc exp/tri1/31.5.acc exp/tri1/31.6.acc exp/tri1/31.7.acc exp/tri1/31.8.acc exp/tri1/31.9.acc 
@@ -15,5 +15,5 @@ LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:113) GMM update: Overall 0.0161
 LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:116) GMM update: Overall avg like per frame = -88.9486 over 1.50285e+06 frames.
 LOG (gmm-est[5.5.166~1-013489]:SplitByCount():am-diag-gmm.cc:116) Split 272 states with target = 3000, power = 0.25, perturb_factor = 0.01 and min_count = 20, split #Gauss from 3009 to 3009
 LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:146) Written model to exp/tri1/32.mdl
-# Accounting: time=0 threads=1
-# Ended (code 0) at Mon Dec  2 01:29:17 CST 2019, elapsed time 0 seconds
+# Accounting: time=1 threads=1
+# Ended (code 0) at Mon Dec  2 13:39:52 CST 2019, elapsed time 1 seconds

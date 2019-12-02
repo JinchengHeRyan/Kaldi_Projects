@@ -1,9 +1,9 @@
 # gmm-acc-stats-ali exp/mono0a/23.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/22/utt2spk scp:data/train/split32/22/cmvn.scp scp:data/train/split32/22/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:gunzip -c exp/mono0a/ali.22.gz|" exp/mono0a/23.22.acc 
-# Started at Mon Dec  2 01:28:18 CST 2019
+# Started at Mon Dec  2 13:38:52 CST 2019
 #
 gmm-acc-stats-ali exp/mono0a/23.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/22/utt2spk scp:data/train/split32/22/cmvn.scp scp:data/train/split32/22/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:gunzip -c exp/mono0a/ali.22.gz|' exp/mono0a/23.22.acc 
-apply-cmvn --utt2spk=ark:data/train/split32/22/utt2spk scp:data/train/split32/22/cmvn.scp scp:data/train/split32/22/feats.scp ark:- 
 add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split32/22/utt2spk scp:data/train/split32/22/cmvn.scp scp:data/train/split32/22/feats.scp ark:- 
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance LD_83355A avg. like is -91.8868 over 239 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance LH_45OA avg. like is -89.2819 over 139 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance LH_Z475A avg. like is -85.3809 over 268 frames.
@@ -12,5 +12,5 @@ LOG (apply-cmvn[5.5.166~1-013489]:main():apply-cmvn.cc:162) Applied cepstral mea
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 231 files, 0 with errors.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -91.4469 over 38810 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
-# Accounting: time=0 threads=1
-# Ended (code 0) at Mon Dec  2 01:28:18 CST 2019, elapsed time 0 seconds
+# Accounting: time=1 threads=1
+# Ended (code 0) at Mon Dec  2 13:38:53 CST 2019, elapsed time 1 seconds

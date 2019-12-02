@@ -1,5 +1,5 @@
 # cat exp/tri1/decode/scoring/12.tra | utils/int2sym.pl -f 2- exp/tri1/graph/words.txt | sed s:\<UNK\>::g | compute-wer --text --mode=present ark:data/test/text ark,p:- >& exp/tri1/decode/wer_12 
-# Started at Mon Dec  2 01:30:00 CST 2019
+# Started at Mon Dec  2 13:40:34 CST 2019
 #
 # Accounting: time=0 threads=1
-# Ended (code 0) at Mon Dec  2 01:30:00 CST 2019, elapsed time 0 seconds
+# Ended (code 0) at Mon Dec  2 13:40:34 CST 2019, elapsed time 0 seconds

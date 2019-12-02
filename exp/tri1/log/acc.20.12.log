@@ -1,9 +1,9 @@
 # gmm-acc-stats-ali exp/tri1/20.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split16/12/utt2spk scp:data/train/split16/12/cmvn.scp scp:data/train/split16/12/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark,s,cs:gunzip -c exp/tri1/ali.12.gz|" exp/tri1/20.12.acc 
-# Started at Mon Dec  2 01:29:09 CST 2019
+# Started at Mon Dec  2 13:39:43 CST 2019
 #
 gmm-acc-stats-ali exp/tri1/20.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split16/12/utt2spk scp:data/train/split16/12/cmvn.scp scp:data/train/split16/12/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark,s,cs:gunzip -c exp/tri1/ali.12.gz|' exp/tri1/20.12.acc 
-add-deltas ark:- ark:- 
 apply-cmvn --utt2spk=ark:data/train/split16/12/utt2spk scp:data/train/split16/12/cmvn.scp scp:data/train/split16/12/feats.scp ark:- 
+add-deltas ark:- ark:- 
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance LT_81A avg. like is -91.1146 over 106 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance MB_42O3817A avg. like is -92.4426 over 344 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance MB_Z984A avg. like is -90.8814 over 199 frames.
@@ -19,4 +19,4 @@ LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 5
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -89.5361 over 99263 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
 # Accounting: time=0 threads=1
-# Ended (code 0) at Mon Dec  2 01:29:09 CST 2019, elapsed time 0 seconds
+# Ended (code 0) at Mon Dec  2 13:39:43 CST 2019, elapsed time 0 seconds

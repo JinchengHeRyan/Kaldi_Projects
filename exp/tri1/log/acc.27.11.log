@@ -1,5 +1,5 @@
 # gmm-acc-stats-ali exp/tri1/27.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split16/11/utt2spk scp:data/train/split16/11/cmvn.scp scp:data/train/split16/11/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark,s,cs:gunzip -c exp/tri1/ali.11.gz|" exp/tri1/27.11.acc 
-# Started at Mon Dec  2 01:29:12 CST 2019
+# Started at Mon Dec  2 13:39:47 CST 2019
 #
 gmm-acc-stats-ali exp/tri1/27.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split16/11/utt2spk scp:data/train/split16/11/cmvn.scp scp:data/train/split16/11/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark,s,cs:gunzip -c exp/tri1/ali.11.gz|' exp/tri1/27.11.acc 
 apply-cmvn --utt2spk=ark:data/train/split16/11/utt2spk scp:data/train/split16/11/cmvn.scp scp:data/train/split16/11/feats.scp ark:- 
@@ -18,5 +18,5 @@ LOG (apply-cmvn[5.5.166~1-013489]:main():apply-cmvn.cc:162) Applied cepstral mea
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 539 files, 0 with errors.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -89.7802 over 95380 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
-# Accounting: time=1 threads=1
-# Ended (code 0) at Mon Dec  2 01:29:13 CST 2019, elapsed time 1 seconds
+# Accounting: time=0 threads=1
+# Ended (code 0) at Mon Dec  2 13:39:47 CST 2019, elapsed time 0 seconds

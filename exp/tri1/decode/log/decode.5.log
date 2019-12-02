@@ -1,9 +1,9 @@
 # gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri1/graph/words.txt exp/tri1/final.mdl exp/tri1/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split10/5/utt2spk scp:data/test/split10/5/cmvn.scp scp:data/test/split10/5/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:|gzip -c > exp/tri1/decode/lat.5.gz" 
-# Started at Mon Dec  2 01:29:20 CST 2019
+# Started at Mon Dec  2 13:39:54 CST 2019
 #
 gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --allow-partial=true --word-symbol-table=exp/tri1/graph/words.txt exp/tri1/final.mdl exp/tri1/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split10/5/utt2spk scp:data/test/split10/5/cmvn.scp scp:data/test/split10/5/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:|gzip -c > exp/tri1/decode/lat.5.gz' 
-apply-cmvn --utt2spk=ark:data/test/split10/5/utt2spk scp:data/test/split10/5/cmvn.scp scp:data/test/split10/5/feats.scp ark:- 
 add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split10/5/utt2spk scp:data/test/split10/5/cmvn.scp scp:data/test/split10/5/feats.scp ark:- 
 GC_15A 1 5 
 LOG (gmm-latgen-faster[5.5.166~1-013489]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:289) Log-like per frame for utterance GC_15A is -7.63446 over 136 frames.
 GC_1639A 1 6 3 9 
@@ -1699,8 +1699,8 @@ HJ_ZA z
 LOG (gmm-latgen-faster[5.5.166~1-013489]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:289) Log-like per frame for utterance HJ_ZA is -7.2516 over 91 frames.
 HJ_ZB z 
 LOG (gmm-latgen-faster[5.5.166~1-013489]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:289) Log-like per frame for utterance HJ_ZB is -7.20667 over 97 frames.
-LOG (gmm-latgen-faster[5.5.166~1-013489]:main():gmm-latgen-faster.cc:176) Time taken 31.706s: real-time factor assuming 100 frames/sec is 0.0212707
+LOG (gmm-latgen-faster[5.5.166~1-013489]:main():gmm-latgen-faster.cc:176) Time taken 35.0017s: real-time factor assuming 100 frames/sec is 0.0234816
 LOG (gmm-latgen-faster[5.5.166~1-013489]:main():gmm-latgen-faster.cc:179) Done 847 utterances, failed for 0
 LOG (gmm-latgen-faster[5.5.166~1-013489]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -7.58801 over 149060 frames.
-# Accounting: time=31 threads=1
-# Ended (code 0) at Mon Dec  2 01:29:51 CST 2019, elapsed time 31 seconds
+# Accounting: time=35 threads=1
+# Ended (code 0) at Mon Dec  2 13:40:29 CST 2019, elapsed time 35 seconds
