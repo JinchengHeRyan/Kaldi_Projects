@@ -1,8 +1,8 @@
 # compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/train/wav_train.8.scp ark:- | copy-feats --compress=true ark:- ark,scp:/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_train.8.ark,/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_train.8.scp 
-# Started at Mon Dec  2 13:38:15 CST 2019
+# Started at Mon Dec  2 14:21:19 CST 2019
 #
-copy-feats --compress=true ark:- ark,scp:/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_train.8.ark,/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_train.8.scp 
 compute-mfcc-feats --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/train/wav_train.8.scp ark:- 
+copy-feats --compress=true ark:- ark,scp:/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_train.8.ark,/home/jincheng/SMIIP_1ST_HW/mfcc/raw_mfcc_train.8.scp 
 VLOG[2] (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:173) Processed features for key HS_1477685A
 VLOG[2] (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:173) Processed features for key HS_1535A
 VLOG[2] (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:173) Processed features for key HS_189O5A
@@ -597,5 +597,5 @@ VLOG[2] (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:173) 
 VLOG[2] (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:173) Processed features for key IT_11A
 LOG (compute-mfcc-feats[5.5.166~1-013489]:main():compute-mfcc-feats.cc:176)  Done 539 out of 539 utterances.
 LOG (copy-feats[5.5.166~1-013489]:main():copy-feats.cc:143) Copied 539 feature matrices.
-# Accounting: time=5 threads=1
-# Ended (code 0) at Mon Dec  2 13:38:20 CST 2019, elapsed time 5 seconds
+# Accounting: time=6 threads=1
+# Ended (code 0) at Mon Dec  2 14:21:25 CST 2019, elapsed time 6 seconds
