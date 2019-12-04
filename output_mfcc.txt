@@ -113,6 +113,7 @@ Checking data/lang//oov.{txt, int} ...
 --> Testing determinizability of L_disambig . G
 --> L_disambig . G is determinizable
 --> WARNING (check output above for warnings)
+Using feature mfcc
 steps/make_mfcc.sh --cmd utils/run.pl --nj 16 data/train exp/make_mfcc/train mfcc
 utils/validate_data_dir.sh: Successfully validated data-directory data/train
 steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
@@ -1141,5 +1142,3 @@ steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_latti
 < TC_OOO4611A o o 4 6 1 1
 ---
 > TC_OOO4611A o o o 4 6 1 1
-%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
-%WER exp/tri1/decode/wer_19:%SER 2.74 [ 238 / 8700 ]

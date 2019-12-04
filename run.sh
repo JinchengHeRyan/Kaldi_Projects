@@ -7,10 +7,33 @@ utils/validate_lang.pl data/lang/
 
 . ./cmd.sh
 
-# MFCC Feature extraction
-for x in train test; do 
- steps/make_mfcc.sh --cmd $train_cmd --nj 16 data/$x exp/make_mfcc/$x mfcc
- steps/compute_cmvn_stats.sh data/$x exp/make_mfcc/$x mfcc
+# Determine which feature type should be extracted
+feature_type=mfcc
+if [ ! -n "$1" ] ;then
+    echo "Using default mfcc feature type"
+else
+    echo "Using feature $1"
+    feature_type=$1
+fi
+
+# Feature extraction
+for x in train test; do
+    if [ ${feature_type} = "mfcc" ]; then
+        steps/make_${feature_type}.sh --cmd $train_cmd --nj 16 data/$x exp/make_${feature_type}/$x $feature_type
+        steps/compute_cmvn_stats.sh data/$x exp/make_${feature_type}/$x $feature_type || exit 1;
+    elif [ ${feature_type} = "mfcc_pitch" ]; then
+        steps/make_${feature_type}.sh --cmd $train_cmd --nj 16 data/$x exp/make_${feature_type}/$x $feature_type
+        steps/compute_cmvn_stats.sh data/$x exp/make_${feature_type}/$x $feature_type
+    elif [ ${feature_type} = "plp" ]; then
+        steps/make_${feature_type}.sh --cmd $train_cmd --nj 16 data/$x exp/make_${feature_type}/$x $feature_type
+        steps/compute_cmvn_stats.sh data/$x exp/make_${feature_type}/$x $feature_type
+    elif [ ${feature_type} = "plp_pitch" ]; then
+        steps/make_${feature_type}.sh --cmd $train_cmd --nj 16 data/$x exp/make_${feature_type}/$x $feature_type
+        steps/compute_cmvn_stats.sh data/$x exp/make_${feature_type}/$x $feature_type
+    elif [ ${feature_type} = "fbank" ]; then
+        steps/make_${feature_type}.sh --cmd $train_cmd --nj 16 data/$x exp/make_${feature_type}/$x $feature_type
+        steps/compute_cmvn_stats.sh data/$x exp/make_${feature_type}/$x $feature_type
+    fi
 done
 
 # Monophone training and alignment
@@ -52,4 +75,4 @@ utils/int2sym.pl -f 2- data/lang/words.txt  exp/tri1/decode/scoring/19.tra | sed
 
 
 # Getting results [see RESULTS file]
-for x in exp/*/decode*; do [ -d $x ] && grep SER $x/wer_* | utils/best_wer.sh; done
+for x in exp/*/decode*; do [ -d $x ] && grep SER $x/wer_* | utils/best_wer.sh >> results_${feature_type}.txt; done

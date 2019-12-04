@@ -1,0 +1,622 @@
+# paste-feats --length-tolerance=2 "ark:compute-plp-feats  --verbose=2 --config=conf/plp.conf scp,p:exp/make_plp_pitch/test/wav_test.13.scp ark:- |" "ark,s,cs:compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:exp/make_plp_pitch/test/wav_test.13.scp ark:- | process-kaldi-pitch-feats  ark:- ark:- |" ark:- | copy-feats --compress=true ark:- ark,scp:/home/jincheng/SMIIP_1ST_HW/plp_pitch/raw_plp_pitch_test.13.ark,/home/jincheng/SMIIP_1ST_HW/plp_pitch/raw_plp_pitch_test.13.scp 
+# Started at Thu Dec  5 01:00:00 CST 2019
+#
+paste-feats --length-tolerance=2 'ark:compute-plp-feats  --verbose=2 --config=conf/plp.conf scp,p:exp/make_plp_pitch/test/wav_test.13.scp ark:- |' 'ark,s,cs:compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:exp/make_plp_pitch/test/wav_test.13.scp ark:- | process-kaldi-pitch-feats  ark:- ark:- |' ark:- 
+copy-feats --compress=true ark:- ark,scp:/home/jincheng/SMIIP_1ST_HW/plp_pitch/raw_plp_pitch_test.13.ark,/home/jincheng/SMIIP_1ST_HW/plp_pitch/raw_plp_pitch_test.13.scp 
+compute-plp-feats --verbose=2 --config=conf/plp.conf scp,p:exp/make_plp_pitch/test/wav_test.13.scp ark:- 
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_9A
+process-kaldi-pitch-feats ark:- ark:- 
+compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:exp/make_plp_pitch/test/wav_test.13.scp ark:- 
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_9B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_O2433A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_O2671A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_O3696A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_O4O85A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_O666A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_OB
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 10 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_Z19ZZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_Z5797Z2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_Z5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_Z931ZZ3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_ZB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key MJ_ZZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_1133187A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_1566Z35A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_1625A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 20 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_16A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_1A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_1B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_1O78A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_228A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_24O2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_28934A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_2B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_2OA
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 30 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_2Z32ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_327O9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_35A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_372A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_38A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_3B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_3Z97A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_41963A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_469A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 40 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_47741A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_49A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_4B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_4Z448A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_5267983A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_5345A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_57844A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_5B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 50 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_5O5536OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_5Z81A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_65A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_67Z6A
+VLOG[2] (compute-kaldi-pitch-feats[5.5.166~1-013489]:main():compute-kaldi-pitch-feats.cc:107) Processed 50 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_6854A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_69621A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_6B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_6Z275A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_72OA
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 60 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_73A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_7646374A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_76O548OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_7A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_7B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_7Z1Z558A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_829OOA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_83A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_843A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_86647A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 70 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_8773A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_8B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_9143O31A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_92A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_94O3O45A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_995A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_99OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_9B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 80 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_O11A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_O17A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_O42A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_O88OO9OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_OB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_OO88OO6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_Z1A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_Z719A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_Z751A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 90 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_Z9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_ZB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key ML_ZZ6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_11616A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_1286A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_17A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_196ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_1A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_1B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 100 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_1OO4977A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_228Z125A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_233OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_2352O27A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_2415ZZ9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_29A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_2B
+VLOG[2] (compute-kaldi-pitch-feats[5.5.166~1-013489]:main():compute-kaldi-pitch-feats.cc:107) Processed 100 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_311A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_34A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 110 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_38ZZ7A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_3951A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_397A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_3B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_42O92A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_4591A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_46O2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_4B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 120 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_4Z1A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_4Z454A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_5249A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_54148O7A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_5538344A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_56446A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_58432A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_5B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_657A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 130 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_66985O3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_6763791A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_676A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_6815A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_6B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_73A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_786A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_7A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_7B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 140 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_7O5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_7OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_7Z75A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_813A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_82A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_8736A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_885ZZ3ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_88A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_8B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 150 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_94A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_962Z4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_98A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_9B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_9O6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_9Z2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_O3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_O4A
+VLOG[2] (compute-kaldi-pitch-feats[5.5.166~1-013489]:main():compute-kaldi-pitch-feats.cc:107) Processed 150 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_O8O14O7A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 160 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_O947A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_OB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_OO19OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_Z2717A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_Z3532A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_Z6189A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_Z626687A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_ZB
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 170 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NA_ZZ5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_1393A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_1397673A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_153A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_18Z7747A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_1A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_1B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_1Z25ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_216851OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_24ZA
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 180 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_2563A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_2622A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_2B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_2Z152A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_32A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_34A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_36644A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_38A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_38B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 190 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_3B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_436A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_45ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_47A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_4B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_4O161A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_4Z9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_5263A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 200 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_5417948A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_55591A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_569A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_5989754A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_5B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_61A
+VLOG[2] (compute-kaldi-pitch-feats[5.5.166~1-013489]:main():compute-kaldi-pitch-feats.cc:107) Processed 200 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_657ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_658Z4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_68143Z3A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 210 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_6B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_6ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_7235128A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_728O946A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_73O7423A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_757A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_7786O3OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_7A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_7B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 220 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_818A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_831A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_8589A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_8799A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_882A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_8B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_9224121A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_9629A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_964A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 230 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_9B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_9O6OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_9ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_O5O27A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_O6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_O87O8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_OB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_OO33A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 240 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_OOA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_Z4Z5ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_Z5311A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_Z6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_Z71ZZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_Z99ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NK_ZB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_133A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_1457A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 250 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_16A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_17A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_19974A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_1A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_1B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_22641A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_2318A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_27984A
+VLOG[2] (compute-kaldi-pitch-feats[5.5.166~1-013489]:main():compute-kaldi-pitch-feats.cc:107) Processed 250 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_28324A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_29OA
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 260 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_2B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_33A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_34A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_3561A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_39ZZ369A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_3B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_3O4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_42178A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 270 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_4425Z91A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_46A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_49A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_4B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_4Z8ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_5384A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_548365OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_54A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_553A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 280 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_5B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_5O2OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_624O7O9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_62729A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_6492Z68A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_6886A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_6B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_6ZZ47Z1A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 290 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_718A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_72A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_734OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_7551322A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_7A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_7B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_7OO3OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_811A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_8196A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_82O6OA
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 300 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_8569477A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_8B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_8O8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_93ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_95A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_961OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_9B
+VLOG[2] (compute-kaldi-pitch-feats[5.5.166~1-013489]:main():compute-kaldi-pitch-feats.cc:107) Processed 300 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_9OO6O43A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 310 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_9Z5ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_O12A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_O21A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_O5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_O79A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_OB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_OO38A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_Z28Z667A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_Z2A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 320 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_Z441ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_Z86ZZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_ZB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NL_ZZ1523ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_1177671A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_12182A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_13A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_147A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_154A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 330 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_1A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_1B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_23516A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_2496Z88A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_25O22A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_2894A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_299A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_2B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_3336A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 340 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_34A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_37A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_3B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_3OOA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_3ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_41Z6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_445OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_462A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_4786OA
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 350 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_4B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_4OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_512Z925A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_57456A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_57O7659A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_5A
+VLOG[2] (compute-kaldi-pitch-feats[5.5.166~1-013489]:main():compute-kaldi-pitch-feats.cc:107) Processed 350 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_5B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_5Z3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_5ZA
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 360 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_617OO52A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_64A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_655632OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_675597ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_693A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_6B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_72373A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_75298A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_7831A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 370 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_7958A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_79O71A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_7A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_7B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_8169ZZ8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_81A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_838A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_853A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_85A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_8A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 380 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_8B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_913Z54ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_91987A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_9322ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_9664A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_97248A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_9B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_O1A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_O3OA
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 390 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_O6O5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_O8O6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_O994A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_OB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_Z1ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_Z263531A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_Z443A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_Z48Z284A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_Z9A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 400 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NP_ZB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_114A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_11653A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_1457A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_1786A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_1A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_1B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_1O13126A
+VLOG[2] (compute-kaldi-pitch-feats[5.5.166~1-013489]:main():compute-kaldi-pitch-feats.cc:107) Processed 400 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_2441617A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 410 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_25A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_26A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_27Z1A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_2B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_2ZZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_32A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_38ZZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_39241A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_3976983A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 420 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_3B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_3OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_429Z612A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_43A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_4668OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_47A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_48A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_4B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 430 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_5318521A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_554A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_5786A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_58O6737A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_59Z2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_5B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_63Z74A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_656A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_685O882A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 440 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_69OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_6B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_6Z554Z8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_719OOA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_7387OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_74ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_7527A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_7A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_7B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 450 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_7O77A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_8156A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_81OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_82Z2ZZ9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_893Z9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_89A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_8B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_94OA
+VLOG[2] (compute-kaldi-pitch-feats[5.5.166~1-013489]:main():compute-kaldi-pitch-feats.cc:107) Processed 450 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_9729A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 460 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_98Z76Z8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_992A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_99644A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_9B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_O35OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_O3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_O45O9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_O51A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_O59A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 470 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_OB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_Z36Z5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_Z477966A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_Z4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_Z6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_ZB
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key NT_ZZ375A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_126A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 480 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_128A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_136A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_18O2O65A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_1A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_1B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_1Z8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_211O889A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_23A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_247348ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_27147A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 490 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_282A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_2B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_316A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_31A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_3422A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_3744A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_37A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_3A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_3B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 500 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_41A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_435A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_45Z74A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_485A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_4B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_4O629A
+VLOG[2] (compute-kaldi-pitch-feats[5.5.166~1-013489]:main():compute-kaldi-pitch-feats.cc:107) Processed 500 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_526883ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_529Z4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_5325A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 510 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_5663A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_5A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_5B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_5O9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_617581ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_6773238A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_6A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_6B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_6O3O9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_6O55OOOA
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 520 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_6Z511A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_71467A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_7219A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_7699A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_7836A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_7865446A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_7A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_7B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_818A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_857ZA
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 530 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_87645A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_8927Z66A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_8B
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_8ZA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_91756Z8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_95A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_98O4A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_9A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_9B
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:172) Processed 540 utterances
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_9O8A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_9OA
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_O15O2A
+VLOG[2] (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:173) Processed features for key PC_O169A
+LOG (compute-plp-feats[5.5.166~1-013489]:main():compute-plp-feats.cc:176)  Done 543 out of 543 utterances.
+LOG (compute-kaldi-pitch-feats[5.5.166~1-013489]:main():compute-kaldi-pitch-feats.cc:110) Done 543 utterances, 0 with errors.
+LOG (process-kaldi-pitch-feats[5.5.166~1-013489]:main():process-kaldi-pitch-feats.cc:85) Post-processed pitch for 543 utterances.
+LOG (paste-feats[5.5.166~1-013489]:main():paste-feats.cc:158) Done 543 utts, errors on 0
+LOG (copy-feats[5.5.166~1-013489]:main():copy-feats.cc:143) Copied 543 feature matrices.
+# Accounting: time=6 threads=1
+# Ended (code 0) at Thu Dec  5 01:00:07 CST 2019, elapsed time 6 seconds
