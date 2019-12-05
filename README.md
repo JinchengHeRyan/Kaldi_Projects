@@ -6,3 +6,5 @@ Annotated parts of code in prepare_lm.sh which is repeated in prepare_data.sh
 Need to deeperly understand what happened in prepare_lm.sh. 
 
 Finishing comparing the results among different feature types. 
+
+Finishing comparing the results among different gaussian numbers. 
