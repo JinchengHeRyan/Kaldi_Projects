@@ -1,0 +1,1287 @@
+fix_data_dir.sh: kept all 8623 utterances.
+fix_data_dir.sh: old files are kept in data/train/.backup
+fix_data_dir.sh: kept all 8700 utterances.
+fix_data_dir.sh: old files are kept in data/test/.backup
+utils/validate_lang.pl data/lang/
+Checking data/lang//phones.txt ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/lang//phones.txt is OK
+
+Checking words.txt: #0 ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> data/lang//words.txt is OK
+
+Checking disjoint: silence.txt, nonsilence.txt, disambig.txt ...
+--> silence.txt and nonsilence.txt are disjoint
+--> silence.txt and disambig.txt are disjoint
+--> disambig.txt and nonsilence.txt are disjoint
+--> disjoint property is OK
+
+Checking sumation: silence.txt, nonsilence.txt, disambig.txt ...
+--> WARNING: data/lang//phones/disambig.txt is empty or does not exist
+--> found no unexplainable phones in phones.txt
+
+Checking data/lang//phones/context_indep.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang//phones/context_indep.txt
+--> data/lang//phones/context_indep.int corresponds to data/lang//phones/context_indep.txt
+--> data/lang//phones/context_indep.csl corresponds to data/lang//phones/context_indep.txt
+--> data/lang//phones/context_indep.{txt, int, csl} are OK
+
+Checking data/lang//phones/nonsilence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 19 entry/entries in data/lang//phones/nonsilence.txt
+--> data/lang//phones/nonsilence.int corresponds to data/lang//phones/nonsilence.txt
+--> data/lang//phones/nonsilence.csl corresponds to data/lang//phones/nonsilence.txt
+--> data/lang//phones/nonsilence.{txt, int, csl} are OK
+
+Checking data/lang//phones/silence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang//phones/silence.txt
+--> data/lang//phones/silence.int corresponds to data/lang//phones/silence.txt
+--> data/lang//phones/silence.csl corresponds to data/lang//phones/silence.txt
+--> data/lang//phones/silence.{txt, int, csl} are OK
+
+Checking data/lang//phones/optional_silence.{txt, int, csl} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang//phones/optional_silence.txt
+--> data/lang//phones/optional_silence.int corresponds to data/lang//phones/optional_silence.txt
+--> data/lang//phones/optional_silence.csl corresponds to data/lang//phones/optional_silence.txt
+--> data/lang//phones/optional_silence.{txt, int, csl} are OK
+
+Checking data/lang//phones/disambig.{txt, int, csl} ...
+--> WARNING: data/lang//phones/disambig.txt is empty
+--> WARNING: data/lang//phones/disambig.int is empty
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 0 entry/entries in data/lang//phones/disambig.txt
+--> data/lang//phones/disambig.int corresponds to data/lang//phones/disambig.txt
+--> data/lang//phones/disambig.csl corresponds to data/lang//phones/disambig.txt
+--> data/lang//phones/disambig.{txt, int, csl} are OK
+
+Checking data/lang//phones/roots.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 20 entry/entries in data/lang//phones/roots.txt
+--> data/lang//phones/roots.int corresponds to data/lang//phones/roots.txt
+--> data/lang//phones/roots.{txt, int} are OK
+
+Checking data/lang//phones/sets.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 20 entry/entries in data/lang//phones/sets.txt
+--> data/lang//phones/sets.int corresponds to data/lang//phones/sets.txt
+--> data/lang//phones/sets.{txt, int} are OK
+
+Checking data/lang//phones/extra_questions.{txt, int} ...
+Checking optional_silence.txt ...
+--> reading data/lang//phones/optional_silence.txt
+--> data/lang//phones/optional_silence.txt is OK
+
+Checking disambiguation symbols: #0 and #1
+--> WARNING: data/lang//phones/disambig.txt is empty or does not exist
+--> WARNING: data/lang//phones/disambig.txt doesn't have "#0" or "#1";
+-->          this would not be OK with a conventional ARPA-type language
+-->          model or a conventional lexicon (L.fst)
+Checking topo ...
+
+Checking word-level disambiguation symbols...
+--> no data/lang//phones/wdisambig.txt (older prepare_lang.sh)
+--> WARNING: data/lang//words.txt doesn't have "#0"
+-->          (if you are using ARPA-type language models, you will normally
+-->           need the disambiguation symbol "#0" to ensure determinizability)
+Checking data/lang//oov.{txt, int} ...
+--> text seems to be UTF-8 or ASCII, checking whitespaces
+--> text contains only allowed whitespaces
+--> 1 entry/entries in data/lang//oov.txt
+--> data/lang//oov.int corresponds to data/lang//oov.txt
+--> data/lang//oov.{txt, int} are OK
+
+--> data/lang//L.fst is olabel sorted
+--> data/lang//L_disambig.fst is olabel sorted
+--> data/lang//G.fst is ilabel sorted
+--> data/lang//G.fst has 1 states
+--> data/lang//G.fst is determinizable
+--> utils/lang/check_g_properties.pl successfully validated data/lang//G.fst
+--> utils/lang/check_g_properties.pl succeeded.
+--> Testing determinizability of L_disambig . G
+--> L_disambig . G is determinizable
+--> WARNING (check output above for warnings)
+Using feature mfcc
+steps/make_mfcc.sh --cmd utils/run.pl --nj 16 data/train exp/make_mfcc/train mfcc
+steps/make_mfcc.sh: moving data/train/feats.scp to data/train/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/train
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating MFCC features for train
+steps/compute_cmvn_stats.sh data/train exp/make_mfcc/train mfcc
+Succeeded creating CMVN stats for train
+steps/make_mfcc.sh --cmd utils/run.pl --nj 16 data/test exp/make_mfcc/test mfcc
+steps/make_mfcc.sh: moving data/test/feats.scp to data/test/.backup
+utils/validate_data_dir.sh: Successfully validated data-directory data/test
+steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
+Succeeded creating MFCC features for test
+steps/compute_cmvn_stats.sh data/test exp/make_mfcc/test mfcc
+Succeeded creating CMVN stats for test
+steps/train_mono.sh --nj 32 --cmd utils/run.pl data/train data/lang exp/mono0a
+steps/train_mono.sh: Initializing monophone system.
+steps/train_mono.sh: Compiling training graphs
+steps/train_mono.sh: Aligning data equally (pass 0)
+steps/train_mono.sh: Pass 1
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 2
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 3
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 4
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 5
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 6
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 7
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 8
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 9
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 10
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 11
+steps/train_mono.sh: Pass 12
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 13
+steps/train_mono.sh: Pass 14
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 15
+steps/train_mono.sh: Pass 16
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 17
+steps/train_mono.sh: Pass 18
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 19
+steps/train_mono.sh: Pass 20
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 21
+steps/train_mono.sh: Pass 22
+steps/train_mono.sh: Pass 23
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 24
+steps/train_mono.sh: Pass 25
+steps/train_mono.sh: Pass 26
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 27
+steps/train_mono.sh: Pass 28
+steps/train_mono.sh: Pass 29
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 30
+steps/train_mono.sh: Pass 31
+steps/train_mono.sh: Pass 32
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 33
+steps/train_mono.sh: Pass 34
+steps/train_mono.sh: Pass 35
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 36
+steps/train_mono.sh: Pass 37
+steps/train_mono.sh: Pass 38
+steps/train_mono.sh: Aligning data
+steps/train_mono.sh: Pass 39
+steps/diagnostic/analyze_alignments.sh --cmd utils/run.pl data/lang exp/mono0a
+steps/diagnostic/analyze_alignments.sh: see stats in exp/mono0a/log/analyze_alignments.log
+1 warnings in exp/mono0a/log/align.*.*.log
+exp/mono0a: nj=32 align prob=-90.90 over 4.17h [retry=0.0%, fail=0.0%] states=62 gauss=996
+steps/train_mono.sh: Done training monophone system in exp/mono0a
+0.000106796 7.95592e-05
+0.000106796 7.95592e-05
+0.000374163 -0.000456485
+steps/decode.sh --nj 10 --cmd utils/run.pl exp/mono0a/graph data/test exp/mono0a/decode
+decode.sh: feature type is delta
+steps/diagnostic/analyze_lats.sh --cmd utils/run.pl exp/mono0a/graph exp/mono0a/decode
+steps/diagnostic/analyze_lats.sh: see stats in exp/mono0a/decode/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,1,2) and mean=1.4
+steps/diagnostic/analyze_lats.sh: see stats in exp/mono0a/decode/log/analyze_lattice_depth_stats.log
+steps/align_si.sh --boost-silence 1.25 --nj 16 --cmd utils/run.pl data/train data/lang exp/mono0a exp/mono0a_ali
+steps/align_si.sh: feature type is delta
+steps/align_si.sh: aligning data in data/train using model from exp/mono0a, putting alignments in exp/mono0a_ali
+steps/diagnostic/analyze_alignments.sh --cmd utils/run.pl data/lang exp/mono0a_ali
+steps/diagnostic/analyze_alignments.sh: see stats in exp/mono0a_ali/log/analyze_alignments.log
+steps/align_si.sh: done aligning data.
+steps/train_deltas.sh --cmd utils/run.pl 2000 13000 data/train data/lang exp/mono0a_ali exp/tri1
+steps/train_deltas.sh: accumulating tree stats
+steps/train_deltas.sh: getting questions for tree-building, via clustering
+steps/train_deltas.sh: building the tree
+steps/train_deltas.sh: converting alignments from exp/mono0a_ali to use current tree
+steps/train_deltas.sh: compiling graphs of transcripts
+steps/train_deltas.sh: training pass 1
+steps/train_deltas.sh: training pass 2
+steps/train_deltas.sh: training pass 3
+steps/train_deltas.sh: training pass 4
+steps/train_deltas.sh: training pass 5
+steps/train_deltas.sh: training pass 6
+steps/train_deltas.sh: training pass 7
+steps/train_deltas.sh: training pass 8
+steps/train_deltas.sh: training pass 9
+steps/train_deltas.sh: training pass 10
+steps/train_deltas.sh: aligning data
+steps/train_deltas.sh: training pass 11
+steps/train_deltas.sh: training pass 12
+steps/train_deltas.sh: training pass 13
+steps/train_deltas.sh: training pass 14
+steps/train_deltas.sh: training pass 15
+steps/train_deltas.sh: training pass 16
+steps/train_deltas.sh: training pass 17
+steps/train_deltas.sh: training pass 18
+steps/train_deltas.sh: training pass 19
+steps/train_deltas.sh: training pass 20
+steps/train_deltas.sh: aligning data
+steps/train_deltas.sh: training pass 21
+steps/train_deltas.sh: training pass 22
+steps/train_deltas.sh: training pass 23
+steps/train_deltas.sh: training pass 24
+steps/train_deltas.sh: training pass 25
+steps/train_deltas.sh: training pass 26
+steps/train_deltas.sh: training pass 27
+steps/train_deltas.sh: training pass 28
+steps/train_deltas.sh: training pass 29
+steps/train_deltas.sh: training pass 30
+steps/train_deltas.sh: aligning data
+steps/train_deltas.sh: training pass 31
+steps/train_deltas.sh: training pass 32
+steps/train_deltas.sh: training pass 33
+steps/train_deltas.sh: training pass 34
+steps/diagnostic/analyze_alignments.sh --cmd utils/run.pl data/lang exp/tri1
+steps/diagnostic/analyze_alignments.sh: see stats in exp/tri1/log/analyze_alignments.log
+1 warnings in exp/tri1/log/init_model.log
+29 warnings in exp/tri1/log/update.*.log
+exp/tri1: nj=16 align prob=-87.70 over 4.17h [retry=0.0%, fail=0.0%] states=448 gauss=13021 tree-impr=5.85
+steps/train_deltas.sh: Done training system with delta+delta-delta features in exp/tri1
+0.000106796 0
+0.000403519 -0.000446525
+steps/decode.sh --nj 10 --cmd utils/run.pl exp/tri1/graph data/test exp/tri1/decode
+decode.sh: feature type is delta
+steps/diagnostic/analyze_lats.sh --cmd utils/run.pl exp/tri1/graph exp/tri1/decode
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(1,1,2) and mean=1.1
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri1/decode/log/analyze_lattice_depth_stats.log
+24c24
+< AH_428OOO9A 4 2 8 o o 9
+---
+> AH_428OOO9A 4 2 8 o o o 9
+140,141c140,141
+< AK_9OA 9 8 o
+< AK_O67O3A o 6 7 8 3
+---
+> AK_9OA 9 o
+> AK_O67O3A o 6 7 o 3
+143c143
+< AK_O9OA o 9 8 o
+---
+> AK_O9OA o 9 o
+146,147c146,147
+< AK_OO21641A o 2 1 6 4 1
+< AK_OOA o
+---
+> AK_OO21641A o o 2 1 6 4 1
+> AK_OOA o o
+203c203
+< AP_7OO4OA 7 o 4 o
+---
+> AP_7OO4OA 7 o o 4 o
+270c270
+< AR_66O1348A 6 6 o o 1 3 4 8
+---
+> AR_66O1348A 6 6 o 1 3 4 8
+291c291
+< AR_988O9A 9 8 8 o o 9
+---
+> AR_988O9A 9 8 8 o 9
+366c366
+< AT_951A 9 5 4
+---
+> AT_951A 9 5 1
+394c394
+< BA_2597298A 2 5 9 7 2 o 9 8
+---
+> BA_2597298A 2 5 9 7 2 9 8
+462c462
+< BC_147OOA 1 4 7 o
+---
+> BC_147OOA 1 4 7 o o
+503c503
+< BC_6O92OO4A 6 o 9 2 o o o 4
+---
+> BC_6O92OO4A 6 o 9 2 o o 4
+602c602
+< BE_O3O8OO1A o 3 o 8 o 1
+---
+> BE_O3O8OO1A o 3 o 8 o o 1
+659c659
+< BF_72O464OA 7 2 o o 4 6 4 o
+---
+> BF_72O464OA 7 2 o 4 6 4 o
+668c668
+< BF_85OA 8 5 o o
+---
+> BF_85OA 8 5 o
+718c718
+< BJ_4A o
+---
+> BJ_4A 4
+807c807
+< BL_672O642A 6 7 2 o o 6 4 2
+---
+> BL_672O642A 6 7 2 o 6 4 2
+867c867
+< BM_3OOA 3 o
+---
+> BM_3OOA 3 o o
+1027c1027
+< BS_4OA 4 o o
+---
+> BS_4OA 4 o
+1039c1039
+< BS_6914OA 6 9 1 4 o o
+---
+> BS_6914OA 6 9 1 4 o
+1084c1084
+< BW_1Z278A 1 z 2 o 7 8
+---
+> BW_1Z278A 1 z 2 7 8
+1114c1114
+< BW_659954OA 6 5 9 9 5 4 o o
+---
+> BW_659954OA 6 5 9 9 5 4 o
+1141c1141
+< BW_O1OA o 1 o o
+---
+> BW_O1OA o 1 o
+1146c1146
+< BW_OO468A o 4 6 8
+---
+> BW_OO468A o o 4 6 8
+1253c1253
+< CD_41A 4
+---
+> CD_41A 4 1
+1259c1259
+< CD_4O325A 4 o o 3 2 5
+---
+> CD_4O325A 4 o 3 2 5
+1378c1378
+< CE_OOOA o o
+---
+> CE_OOOA o o o
+1399c1399
+< CJ_2OOA 2 o o o
+---
+> CJ_2OOA 2 o o
+1449c1449
+< CJ_O274OA o 2 7 4 o o
+---
+> CJ_O274OA o 2 7 4 o
+1451c1451
+< CJ_O4O9A o 4 o o 9
+---
+> CJ_O4O9A o 4 o 9
+1479c1479
+< CP_34O6A 3 4 o o 6
+---
+> CP_34O6A 3 4 o 6
+1485c1485
+< CP_441O46OA 4 4 1 o 4 6 o o
+---
+> CP_441O46OA 4 4 1 o 4 6 o
+1493c1493
+< CP_558A 5 5 o 8
+---
+> CP_558A 5 5 8
+1497c1497
+< CP_5O56A 5 o o 5 6
+---
+> CP_5O56A 5 o 5 6
+1532c1532
+< CP_OOA o o o
+---
+> CP_OOA o o
+1537c1537
+< CP_Z883A z o 8 8 3
+---
+> CP_Z883A z 8 8 3
+1550c1550
+< CS_28A 2 8 8
+---
+> CS_28A 2 8
+1625c1625
+< CT_262OA 2 6 2 o o
+---
+> CT_262OA 2 6 2 o
+1675c1675
+< CT_97OOA 9 7 o
+---
+> CT_97OOA 9 7 o o
+1704c1704
+< DF_27A 2 o 7
+---
+> DF_27A 2 7
+1735c1735
+< DF_6O3OA 6 o o 3 o
+---
+> DF_6O3OA 6 o 3 o
+1742c1742
+< DF_7O897A 7 o o 8 9 7
+---
+> DF_7O897A 7 o 8 9 7
+1911c1911
+< DP_O1957OOA o 1 9 5 7 o
+---
+> DP_O1957OOA o 1 9 5 7 o o
+2008c2008
+< DW_1O5OO45A 1 o 5 4 4 5
+---
+> DW_1O5OO45A 1 o 5 o o 4 5
+2243c2243
+< EJ_26OA 2 o 6 o o
+---
+> EJ_26OA 2 6 o
+2255c2255
+< EJ_422A 4 2 o 2
+---
+> EJ_422A 4 2 2
+2269c2269
+< EJ_62O69O3A 6 2 o o 6 9 o 3
+---
+> EJ_62O69O3A 6 2 o 6 9 o 3
+2318,2319c2318,2319
+< EM_236A 2 o 3 6
+< EM_2773161A 2 o 7 7 3 1 6 1
+---
+> EM_236A 2 3 6
+> EM_2773161A 2 7 7 3 1 6 1
+2333c2333
+< EM_4498A 4 4 1 9 8
+---
+> EM_4498A 4 4 9 8
+2336c2336
+< EM_4B 4 o
+---
+> EM_4B 4
+2345c2345
+< EM_623A 6 2 o 3
+---
+> EM_623A 6 2 3
+2349c2349
+< EM_6694A 6 6 9 4 o
+---
+> EM_6694A 6 6 9 4
+2372c2372
+< EM_9Z225A 9 z o 2 2 9
+---
+> EM_9Z225A 9 z 2 2 5
+2382c2382
+< EM_Z93A z o 9 3
+---
+> EM_Z93A z 9 3
+2384c2384
+< EM_ZB z o
+---
+> EM_ZB z
+2397c2397
+< EP_29Z6ZA 2 o 9 z 6 z
+---
+> EP_29Z6ZA 2 9 z 6 z
+2400c2400
+< EP_2O18A 2 o o 1 8
+---
+> EP_2O18A 2 o 1 8
+2414c2414
+< EP_4O6O965A 4 o o 6 o 9 6 5
+---
+> EP_4O6O965A 4 o 6 o 9 6 5
+2476c2476
+< ER_2OOA 2 o
+---
+> ER_2OOA 2 o o
+2533c2533
+< ER_OO666A o o o 6 6 6
+---
+> ER_OO666A o o 6 6 6
+2599c2599
+< ET_95OOA 9 5 o
+---
+> ET_95OOA 9 5 o o
+2610c2610
+< ET_OO8O3A o 8 o 3
+---
+> ET_OO8O3A o o 8 o 3
+2663c2663
+< EW_75OA 7 5 o o
+---
+> EW_75OA 7 5 o
+2772c2772
+< FG_14O3A 1 4 o o 3
+---
+> FG_14O3A 1 4 o 3
+2799c2799
+< FG_4O857A 4 o o 8 5 7
+---
+> FG_4O857A 4 o 8 5 7
+2933c2933
+< FM_214O3A 2 1 4 o o 3
+---
+> FM_214O3A 2 1 4 o 3
+2967c2967
+< FM_6OA 6 o o
+---
+> FM_6OA 6 o
+2995c2995
+< FM_OO8A o o o 8
+---
+> FM_OO8A o o 8
+3023c3023
+< FN_3OOA 3 o o o
+---
+> FN_3OOA 3 o o
+3027c3027
+< FN_488O7O1A 4 8 o 8 o 7 o 1
+---
+> FN_488O7O1A 4 8 8 o 7 o 1
+3037c3037
+< FN_5O5O856A 5 o 5 o o 8 5 6
+---
+> FN_5O5O856A 5 o 5 o 8 5 6
+3041c3041
+< FN_6787ZA 6 7 o 8 7 z
+---
+> FN_6787ZA 6 7 8 7 z
+3045c3045
+< FN_738A 7 3 o 8
+---
+> FN_738A 7 3 8
+3053c3053
+< FN_88293A 8 o 8 2 9 3
+---
+> FN_88293A 8 8 2 9 3
+3061c3061
+< FN_9784OA 9 7 o 8 4 o
+---
+> FN_9784OA 9 7 8 4 o
+3075c3075
+< FN_Z89A z o 8 9
+---
+> FN_Z89A z 8 9
+3089c3089
+< FP_2927A 2 o 9 2 7
+---
+> FP_2927A 2 9 2 7
+3102c3102
+< FP_42775A 4 2 o 7 7 5
+---
+> FP_42775A 4 2 7 7 5
+3150c3150
+< FP_Z268224A z 2 6 8 2 o 2 4
+---
+> FP_Z268224A z 2 6 8 2 2 4
+3248c3248
+< FS_328Z9A 3 2 o 8 z 9
+---
+> FS_328Z9A 3 2 8 z 9
+3279c3279
+< FS_78414A 7 4 1 4
+---
+> FS_78414A 7 8 4 1 4
+3302c3302
+< FS_OO19A o 1 9
+---
+> FS_OO19A o o 1 9
+3376c3376
+< FT_O57A o o 5 7
+---
+> FT_O57A o 5 7
+3379c3379
+< FT_OO2497OA o o o 2 4 9 7 o
+---
+> FT_OO2497OA o o 2 4 9 7 o
+3381c3381
+< FT_Z2551A z 2 o 5 5 1
+---
+> FT_Z2551A z 2 5 5 1
+3396,3397c3396,3397
+< GA_26Z8A 2 o 6 z 8
+< GA_2762A 2 o 7 6 2
+---
+> GA_26Z8A 2 6 z 8
+> GA_2762A 2 7 6 2
+3399c3399
+< GA_29A 2 o 9
+---
+> GA_29A 2 9
+3413c3413
+< GA_4A o
+---
+> GA_4A 4
+3418c3418
+< GA_5743251A 5 7 4 3 2 o 5 1
+---
+> GA_5743251A 5 7 4 3 2 5 1
+3423c3423
+< GA_6281638A 6 2 8 1 6 3 8 o
+---
+> GA_6281638A 6 2 8 1 6 3 8
+3432c3432
+< GA_72OO499A 7 2 o o o 4 9 9
+---
+> GA_72OO499A 7 2 o o 4 9 9
+3438c3438
+< GA_85O51A 8 5 o o 5 1
+---
+> GA_85O51A 8 5 o 5 1
+3524c3524
+< GB_96OOA 9 6 o
+---
+> GB_96OOA 9 6 o o
+3548c3548
+< GC_1O84O3OA 1 o 8 4 o o 3 o
+---
+> GC_1O84O3OA 1 o 8 4 o 3 o
+3599c3599
+< GC_944OA 9 4 4 o o
+---
+> GC_944OA 9 4 4 o
+3802c3802
+< GM_52344O3A 5 2 3 4 4 o o 3
+---
+> GM_52344O3A 5 2 3 4 4 o 3
+3845c3845
+< GM_Z488Z25A 9 z 4 8 8 z 2 5
+---
+> GM_Z488Z25A z 4 8 8 z 2 5
+3850c3850
+< GN_1615OA 1 6 1 5 o o
+---
+> GN_1615OA 1 6 1 5 o
+3861c3861
+< GN_2O8OO38A 2 o 8 o 3 8
+---
+> GN_2O8OO38A 2 o 8 o o 3 8
+3866c3866
+< GN_35OA 3 5 o o
+---
+> GN_35OA 3 5 o
+3902c3902
+< GN_82OO63OA 8 2 o o o 6 3 o
+---
+> GN_82OO63OA 8 2 o o 6 3 o
+3908c3908
+< GN_9586A 9 5 o 8 6
+---
+> GN_9586A 9 5 8 6
+3919c3919
+< GN_OOA o
+---
+> GN_OOA o o
+3921c3921
+< GN_Z4385A z 4 3 o 8 5
+---
+> GN_Z4385A z 4 3 8 5
+4062c4062
+< GS_966OA 9 6 6 o o
+---
+> GS_966OA 9 6 6 o
+4081c4081
+< GW_143A 1 o 4 3
+---
+> GW_143A 1 4 3
+4089c4089
+< GW_23252A 2 3 8 2 5 2
+---
+> GW_23252A 2 3 2 5 2
+4096c4096
+< GW_324163ZA 3 8 2 4 1 6 3 z
+---
+> GW_324163ZA 3 2 4 1 6 3 z
+4101c4101
+< GW_3Z229A 3 z 2 2 o 9
+---
+> GW_3Z229A 3 z 2 2 9
+4108,4109c4108,4109
+< GW_4ZZ7Z3ZA 4 z z 7 z o 3 z
+< GW_546A 5 o 4 6
+---
+> GW_4ZZ7Z3ZA 4 z z 7 z 3 z
+> GW_546A 5 4 6
+4117c4117
+< GW_65O9A 6 5 o o 9
+---
+> GW_65O9A 6 5 o 9
+4137,4138c4137,4138
+< GW_911O4O8A 9 1 1 o 4 o o 8
+< GW_9231518A 9 2 3 8 1 5 1 8
+---
+> GW_911O4O8A 9 1 1 o 4 o 8
+> GW_9231518A 9 2 3 1 5 1 8
+4178c4178
+< HC_3OO3184A 3 o 3 1 8 4
+---
+> HC_3OO3184A 3 o o 3 1 8 4
+4248c4248
+< HF_2Z889A 2 z o 8 8 9
+---
+> HF_2Z889A 2 z 8 8 9
+4252c4252
+< HF_38O55O3A 3 8 o 5 5 o o 3
+---
+> HF_38O55O3A 3 8 o 5 5 o 3
+4257c4257
+< HF_446OA 4 4 6 o o
+---
+> HF_446OA 4 4 6 o
+4276c4276
+< HF_6O9OA 6 o o 9 o
+---
+> HF_6O9OA 6 o 9 o
+4292c4292
+< HF_92O46A 9 2 o o 4 6
+---
+> HF_92O46A 9 2 o 4 6
+4390c4390
+< HM_12184A 1 2 o 1 8 4 o
+---
+> HM_12184A 1 2 1 8 4
+4392c4392
+< HM_19243A 1 9 2 o 4 3
+---
+> HM_19243A 1 9 2 4 3
+4396,4400c4396,4400
+< HM_25ZZ8A 2 o 5 z z 8
+< HM_268A 2 o 6 8
+< HM_26A 2 o 6
+< HM_279A 2 o 7 9
+< HM_2A 2 o
+---
+> HM_25ZZ8A 2 5 z z 8
+> HM_268A 2 6 8
+> HM_26A 2 6
+> HM_279A 2 7 9
+> HM_2A 2
+4402,4404c4402,4404
+< HM_2O27869A 2 o o 7 8 6 9 8
+< HM_314OA 3 1 4 o o
+< HM_37O21A 3 z 1 o 2 o 1
+---
+> HM_2O27869A 2 o 2 7 8 6 9
+> HM_314OA 3 1 4 o
+> HM_37O21A 3 7 o 2 1
+4409c4409
+< HM_3ZZA 3 z o z
+---
+> HM_3ZZA 3 z z
+4412c4412
+< HM_4966O97A 4 9 6 6 o o 9 7 8
+---
+> HM_4966O97A 4 9 6 6 o 9 7
+4420c4420
+< HM_58OA 5 8 o o
+---
+> HM_58OA 5 8 o
+4423c4423
+< HM_5OO4O32A 5 o o o 4 4 3 8 2
+---
+> HM_5OO4O32A 5 o o 4 o 3 2
+4425,4426c4425,4426
+< HM_63524A 6 3 5 2 4 o
+< HM_659OA 6 5 9 o o
+---
+> HM_63524A 6 3 5 2 4
+> HM_659OA 6 5 9 o
+4430,4431c4430,4431
+< HM_6O67A 6 o 6 7 8
+< HM_713453OA 7 1 3 4 5 3 o o
+---
+> HM_6O67A 6 o 6 7
+> HM_713453OA 7 1 3 4 5 3 o
+4434c4434
+< HM_798188OA 7 9 8 1 8 8 o o
+---
+> HM_798188OA 7 9 8 1 8 8 o
+4439c4439
+< HM_8258146A 8 2 o 5 8 1 4 6
+---
+> HM_8258146A 8 2 5 8 1 4 6
+4441c4441
+< HM_8628ZA 8 6 2 8 z o
+---
+> HM_8628ZA 8 6 2 8 z
+4445c4445
+< HM_92228A 9 2 2 2 o 8
+---
+> HM_92228A 9 2 2 2 8
+4451c4451
+< HM_9Z4A 9 z 4 o
+---
+> HM_9Z4A 9 z 4
+4453c4453
+< HM_O5129A o 5 1 2 o 9
+---
+> HM_O5129A o 5 1 2 9
+4455c4455
+< HM_O89A o o 8 9 8
+---
+> HM_O89A o 8 9
+4459,4461c4459,4461
+< HM_Z2ZZ7A z 2 o z z 7
+< HM_Z3A z o 3
+< HM_Z66A z o 6 6
+---
+> HM_Z2ZZ7A z 2 z z 7
+> HM_Z3A z 3
+> HM_Z66A z 6 6
+4527c4527
+< HR_9OO3584A 9 o 3 5 8 4
+---
+> HR_9OO3584A 9 o o 3 5 8 4
+4553c4553
+< IA_28OOA 2 8 o
+---
+> IA_28OOA 2 8 o o
+4568c4568
+< IA_47OO4A 4 7 o 4
+---
+> IA_47OO4A 4 7 o o 4
+4787c4787
+< II_2Z38232A 2 o z 3 8 2 3 2
+---
+> II_2Z38232A 2 z 3 8 2 3 2
+4962c4962
+< IP_5OOA 5 o
+---
+> IP_5OOA 5 o o
+4970c4970
+< IP_72OOA 7 2 o
+---
+> IP_72OOA 7 2 o o
+4988c4988
+< IP_98OOA 9 8 o
+---
+> IP_98OOA 9 8 o o
+4997c4997
+< IP_OO34A o 3 4
+---
+> IP_OO34A o o 3 4
+5039c5039
+< IW_5O259A 5 o o 2 5 9
+---
+> IW_5O259A 5 o 2 5 9
+5085c5085
+< JA_1866331A 1 8 6 6 3 3 1 1
+---
+> JA_1866331A 1 8 6 6 3 3 1
+5151c5151
+< JA_OO884A o o o 8 8 4
+---
+> JA_OO884A o o 8 8 4
+5200c5200
+< JD_6OA 6 o o
+---
+> JD_6OA 6 o
+5228c5228
+< JD_OO3A o 3
+---
+> JD_OO3A o o 3
+5303c5303
+< JE_O946754A o o 9 4 6 7 5 4
+---
+> JE_O946754A o 9 4 6 7 5 4
+5347c5347
+< JH_5O56A 5 o o 5 6
+---
+> JH_5O56A 5 o 5 6
+5459c5459
+< JW_OO71231A o 7 1 2 3 1
+---
+> JW_OO71231A o o 7 1 2 3 1
+5469c5469
+< KA_122A 1 2 o
+---
+> KA_122A 1 2 2
+5474,5475c5474,5475
+< KA_235O4O3A 2 3 5 o 4 o o 3
+< KA_2579A 2 o 5 7 9
+---
+> KA_235O4O3A 2 3 5 o 4 o 3
+> KA_2579A 2 5 7 9
+5480,5481c5480,5481
+< KA_2O32A 2 o o 3 8 2
+< KA_31O2A 3 1 o 2 o
+---
+> KA_2O32A 2 o 3 2
+> KA_31O2A 3 1 o 2
+5493c5493
+< KA_4B o o
+---
+> KA_4B 4
+5502c5502
+< KA_64O9451A 6 o o o 9 4 5 1
+---
+> KA_64O9451A 6 4 o 9 4 5 1
+5510c5510
+< KA_739O498A 7 3 9 o 4 1 9 8
+---
+> KA_739O498A 7 3 9 o 4 9 8
+5518c5518
+< KA_8622A 8 6 2 o 2
+---
+> KA_8622A 8 6 2 2
+5522c5522
+< KA_8O1O2A 8 o 1 o 2 o
+---
+> KA_8O1O2A 8 o 1 o 2
+5524c5524
+< KA_92O1648A 9 2 o o 1 6 4 8
+---
+> KA_92O1648A 9 2 o 1 6 4 8
+5531c5531
+< KA_O72A o 7 2 o
+---
+> KA_O72A o 7 2
+5640c5640
+< KE_3O7A 3 o o 7
+---
+> KE_3O7A 3 o 7
+5651c5651
+< KE_57OO9O3A 5 7 o o o 9 o 3
+---
+> KE_57OO9O3A 5 7 o o 9 o 3
+5670c5670
+< KE_824OA 8 2 4 o o
+---
+> KE_824OA 8 2 4 o
+5867,5868c5867,5868
+< LE_336ZZA 3 2 6 z z
+< LE_3548262A 2 5 4 2 2 6 2
+---
+> LE_336ZZA 3 3 6 z z
+> LE_3548262A 3 5 4 8 2 6 2
+5882c5882
+< LE_55O97A 5 5 o o 9 7
+---
+> LE_55O97A 5 5 o 9 7
+5902c5902
+< LE_83ZA 2 3 z
+---
+> LE_83ZA 8 3 z
+5918c5918
+< LE_O8A 4 8
+---
+> LE_O8A o 8
+5978c5978
+< LG_8181OO3A 8 1 8 1 o o o 3
+---
+> LG_8181OO3A 8 1 8 1 o o 3
+5992c5992
+< LG_O4O2OA o 4 o o 2 o
+---
+> LG_O4O2OA o 4 o 2 o
+6029c6029
+< LJ_455822ZA 4 5 5 8 2 o 2 z
+---
+> LJ_455822ZA 4 5 5 8 2 2 z
+6039c6039
+< LJ_5B 5 o
+---
+> LJ_5B 5
+6072c6072
+< LJ_O4731OOA o 4 7 3 1 o
+---
+> LJ_O4731OOA o 4 7 3 1 o o
+6110,6111c6110,6111
+< LL_4OA 4 o o
+< LL_51A 5 o 1
+---
+> LL_4OA 4 o
+> LL_51A 5 1
+6119c6119
+< LL_645Z2ZZA 6 4 5 8 z 2 z z
+---
+> LL_645Z2ZZA 6 4 5 z 2 z z
+6122c6122
+< LL_6O9O4O2A 6 o 9 o o 4 o o 2
+---
+> LL_6O9O4O2A 6 o 9 o 4 o 2
+6134c6134
+< LL_85O38A 8 5 o o 3 8
+---
+> LL_85O38A 8 5 o 3 8
+6160c6160
+< LP_1247349A 1 2 4 o 7 3 4 9
+---
+> LP_1247349A 1 2 4 7 3 4 9
+6194c6194
+< LP_5O8O22OA 5 o o 8 o 2 2 o
+---
+> LP_5O8O22OA 5 o 8 o 2 2 o
+6203c6203
+< LP_73413A 7 3 4 o 1 3
+---
+> LP_73413A 7 3 4 1 3
+6205c6205
+< LP_79O7OA 7 9 o o 7 o
+---
+> LP_79O7OA 7 9 o 7 o
+6217c6217
+< LP_94O1423A 9 4 o o 1 4 2 3
+---
+> LP_94O1423A 9 4 o 1 4 2 3
+6280c6280
+< LR_72O85O3A 7 2 8 o 8 5 o 3
+---
+> LR_72O85O3A 7 2 o 8 5 o 3
+6285c6285
+< LR_7OA 7 9
+---
+> LR_7OA 7 o
+6314c6314
+< MC_12OO8A 1 2 o 8
+---
+> MC_12OO8A 1 2 o o 8
+6358c6358
+< MC_75O3294A 7 5 o o 3 2 9 4
+---
+> MC_75O3294A 7 5 o 3 2 9 4
+6369c6369
+< MC_8OO9OA 8 o 9 o
+---
+> MC_8OO9OA 8 o o 9 o
+6418c6418
+< MI_4O13OO8A 4 o 1 3 o 8
+---
+> MI_4O13OO8A 4 o 1 3 o o 8
+6439c6439
+< MI_7O997A 7 o o 9 9 7
+---
+> MI_7O997A 7 o 9 9 7
+6442c6442
+< MI_885358ZA 8 5 3 5 8 z
+---
+> MI_885358ZA 8 8 5 3 5 8 z
+6460c6460
+< MI_OO7OA o 7 o
+---
+> MI_OO7OA o o 7 o
+6553c6553
+< ML_24O2A 2 4 o o 2
+---
+> ML_24O2A 2 4 o 2
+6601c6601
+< ML_9143O31A 9 1 4 3 8 o 3 1
+---
+> ML_9143O31A 9 1 4 3 o 3 1
+6603c6603
+< ML_94O3O45A 9 4 o o 3 8 o 4 5
+---
+> ML_94O3O45A 9 4 o 3 o 4 5
+6643c6643
+< NA_42O92A 4 2 o o 9 2
+---
+> NA_42O92A 4 2 o 9 2
+6679c6679
+< NA_962Z4A 9 6 2 8 z 4
+---
+> NA_962Z4A 9 6 2 z 4
+6760c6760
+< NK_9O6OA 9 o 6 o o
+---
+> NK_9O6OA 9 o 6 o
+6784c6784
+< NL_2318A 2 o 3 1 8
+---
+> NL_2318A 2 3 1 8
+6811c6811
+< NL_624O7O9A 6 2 4 o o 7 o 9
+---
+> NL_624O7O9A 6 2 4 o 7 o 9
+6926c6926
+< NP_Z48Z284A z 4 8 z o 2 8 4
+---
+> NP_Z48Z284A z 4 8 z 2 8 4
+6972c6972
+< NT_719OOA 7 1 9 o
+---
+> NT_719OOA 7 1 9 o o
+7092c7092
+< PF_227918OA 2 2 7 9 1 o 8 o
+---
+> PF_227918OA 2 2 7 9 1 8 o
+7111c7111
+< PF_4O5OOA 4 o o 5 o o
+---
+> PF_4O5OOA 4 o 5 o o
+7168,7169c7168,7169
+< PG_2143332A 2 o 1 4 3 3 3 2
+< PG_2181559A 2 o 1 8 1 5 5 9
+---
+> PG_2143332A 2 1 4 3 3 3 2
+> PG_2181559A 2 1 8 1 5 5 9
+7179c7179
+< PG_3O315A 3 o 3 8 1 5
+---
+> PG_3O315A 3 o 3 1 5
+7202c7202
+< PG_6O7O8A 6 o o 7 o 8
+---
+> PG_6O7O8A 6 o 7 o 8
+7204c7204
+< PG_724OA 7 2 4 o o
+---
+> PG_724OA 7 2 4 o
+7224c7224
+< PG_O139OA o o 1 3 9 o
+---
+> PG_O139OA o 1 3 9 o
+7279c7279
+< PH_6O7A 6 o o 7
+---
+> PH_6O7A 6 o 7
+7301c7301
+< PH_O15OO64A o 1 5 o o o 6 4
+---
+> PH_O15OO64A o 1 5 o o 6 4
+7324c7324
+< PJ_28O4OA 2 o 8 o 4 o o
+---
+> PJ_28O4OA 2 8 o 4 o
+7363c7363
+< PJ_7O969A 7 o o 9 6 9
+---
+> PJ_7O969A 7 o 9 6 9
+7411c7411
+< PL_3O6O732A 3 o 6 o o 7 3 2
+---
+> PL_3O6O732A 3 o 6 o 7 3 2
+7459c7459
+< PL_OO49A o 4 9
+---
+> PL_OO49A o o 4 9
+7461c7461
+< PL_OOO766OA o o 7 6 6 o
+---
+> PL_OOO766OA o o o 7 6 6 o
+7505,7506c7505,7506
+< PN_63OOA 6 3 o
+< PN_66O5O1OA 6 6 o 5 o o 1 o
+---
+> PN_63OOA 6 3 o o
+> PN_66O5O1OA 6 6 o 5 o 1 o
+7558c7558
+< PR_2OOA 2 o
+---
+> PR_2OOA 2 o o
+7598c7598
+< PR_89343OOA 8 9 3 4 3 o
+---
+> PR_89343OOA 8 9 3 4 3 o o
+7615c7615
+< PR_OO7A o 7
+---
+> PR_OO7A o o 7
+7649c7649
+< PT_4OA 4 o o
+---
+> PT_4OA 4 o
+7726c7726
+< RG_4O14A 4 o o 1 4
+---
+> RG_4O14A 4 o 1 4
+7731c7731
+< RG_5695O12A 5 6 9 5 o o 1 2
+---
+> RG_5695O12A 5 6 9 5 o 1 2
+7769c7769
+< RG_OOO824OA o o o 8 2 4 o o
+---
+> RG_OOO824OA o o o 8 2 4 o
+7846c7846
+< RK_OOO2OA o o 2 o
+---
+> RK_OOO2OA o o o 2 o
+7923c7923
+< RL_OOA o
+---
+> RL_OOA o o
+8000c8000
+< RM_OO9O318A o o o 9 o 3 1 8
+---
+> RM_OO9O318A o o 9 o 3 1 8
+8070c8070
+< SA_9OO1A 9 o 1
+---
+> SA_9OO1A 9 o o 1
+8088c8088
+< SI_16OO931A 1 6 o o o 9 3 1
+---
+> SI_16OO931A 1 6 o o 9 3 1
+8178c8178
+< SL_38A 3 8 8
+---
+> SL_38A 3 8
+8189c8189
+< SL_4O1OOA 4 o o 1 o o
+---
+> SL_4O1OOA 4 o 1 o o
+8231c8231
+< SL_OOO6O56A o o 6 o 5 6
+---
+> SL_OOO6O56A o o o 6 o 5 6
+8244c8244
+< SM_1O42O73A 1 o 4 2 8 7 3
+---
+> SM_1O42O73A 1 o 4 2 o 7 3
+8256c8256
+< SM_37OO5A 3 7 o 5
+---
+> SM_37OO5A 3 7 o o 5
+8266c8266
+< SM_4O484A 4 o o 4 8 4
+---
+> SM_4O484A 4 o 4 8 4
+8268c8268
+< SM_535153OA 5 3 5 1 5 3 z
+---
+> SM_535153OA 5 3 5 1 5 3 o
+8273c8273
+< SM_5OOOA 5 o o
+---
+> SM_5OOOA 5 o o o
+8381c8381
+< SN_O883OA o o 8 8 3 o o
+---
+> SN_O883OA o 8 8 3 o
+8482c8482
+< SW_2OO659OA 2 o 6 5 9 o
+---
+> SW_2OO659OA 2 o o 6 5 9 o
+8500c8500
+< SW_56O4247A 5 6 o o 4 2 4 7
+---
+> SW_56O4247A 5 6 o 4 2 4 7
+8579c8579
+< TB_5OA 5 o o
+---
+> TB_5OA 5 o
+8616c8616
+< TB_OO85346A o 8 5 3 4 6
+---
+> TB_OO85346A o o 8 5 3 4 6
+8661c8661
+< TC_64O62A 6 4 o o 6 2
+---
+> TC_64O62A 6 4 o 6 2
+8681c8681
+< TC_946Z9A 9 4 6 o z 9
+---
+> TC_946Z9A 9 4 6 z 9

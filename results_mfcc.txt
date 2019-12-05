@@ -1,2 +1,63 @@
+Gaussian Number: 10000
 %WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
-%WER exp/tri1/decode/wer_19:%SER 2.74 [ 238 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.14 [ 273 / 8700 ]
+Gaussian Number: 11000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 2.92 [ 254 / 8700 ]
+Gaussian Number: 12000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.14 [ 273 / 8700 ]
+Gaussian Number: 13000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.05 [ 265 / 8700 ]
+Gaussian Number: 14000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.21 [ 279 / 8700 ]
+Gaussian Number: 15000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 2.93 [ 255 / 8700 ]
+Gaussian Number: 16000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.17 [ 276 / 8700 ]
+Gaussian Number: 17000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.31 [ 288 / 8700 ]
+Gaussian Number: 18000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.00 [ 261 / 8700 ]
+Gaussian Number: 19000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.32 [ 289 / 8700 ]
+Gaussian Number: 20000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.33 [ 290 / 8700 ]
+Gaussian Number: 21000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.20 [ 278 / 8700 ]
+Gaussian Number: 22000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.30 [ 287 / 8700 ]
+Gaussian Number: 23000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 2.98 [ 259 / 8700 ]
+Gaussian Number: 24000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.09 [ 269 / 8700 ]
+Gaussian Number: 25000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.10 [ 270 / 8700 ]
+Gaussian Number: 26000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 2.91 [ 253 / 8700 ]
+Gaussian Number: 27000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.23 [ 281 / 8700 ]
+Gaussian Number: 28000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 2.89 [ 251 / 8700 ]
+Gaussian Number: 29000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 2.80 [ 244 / 8700 ]
+Gaussian Number: 30000
+%WER exp/mono0a/decode/wer_19:%SER 3.41 [ 297 / 8700 ]
+%WER exp/tri1/decode/wer_19:%SER 3.15 [ 274 / 8700 ]

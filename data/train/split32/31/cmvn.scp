@@ -1,4 +1,4 @@
-RN /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:42213
-RP /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:42615
-RR /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:43017
-RS /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:43419
+RN /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:25413
+RP /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:25655
+RR /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:25897
+RS /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:26139

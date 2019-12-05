@@ -1,19 +1,21 @@
-# gmm-est --mix-up=840 --power=0.25 --write-occs=exp/tri1/7.occs exp/tri1/6.mdl "gmm-sum-accs - exp/tri1/6.*.acc |" exp/tri1/7.mdl 
-# Started at Thu Dec  5 01:04:32 CST 2019
+# gmm-est --mix-up=7600 --power=0.25 --write-occs=exp/tri1/7.occs exp/tri1/6.mdl "gmm-sum-accs - exp/tri1/6.*.acc |" exp/tri1/7.mdl 
+# Started at Thu Dec  5 14:23:19 CST 2019
 #
-gmm-est --mix-up=840 --power=0.25 --write-occs=exp/tri1/7.occs exp/tri1/6.mdl 'gmm-sum-accs - exp/tri1/6.*.acc |' exp/tri1/7.mdl 
+gmm-est --mix-up=7600 --power=0.25 --write-occs=exp/tri1/7.occs exp/tri1/6.mdl 'gmm-sum-accs - exp/tri1/6.*.acc |' exp/tri1/7.mdl 
 gmm-sum-accs - exp/tri1/6.1.acc exp/tri1/6.10.acc exp/tri1/6.11.acc exp/tri1/6.12.acc exp/tri1/6.13.acc exp/tri1/6.14.acc exp/tri1/6.15.acc exp/tri1/6.16.acc exp/tri1/6.2.acc exp/tri1/6.3.acc exp/tri1/6.4.acc exp/tri1/6.5.acc exp/tri1/6.6.acc exp/tri1/6.7.acc exp/tri1/6.8.acc exp/tri1/6.9.acc 
-LOG (gmm-sum-accs[5.5.166~1-013489]:main():gmm-sum-accs.cc:63) Summed 16 stats, total count 1.50285e+06, avg like/frame -29.878
+LOG (gmm-sum-accs[5.5.166~1-013489]:main():gmm-sum-accs.cc:63) Summed 16 stats, total count 1.50285e+06, avg like/frame -90.3582
 LOG (gmm-sum-accs[5.5.166~1-013489]:main():gmm-sum-accs.cc:66) Total count of stats is 1.50285e+06
 LOG (gmm-sum-accs[5.5.166~1-013489]:main():gmm-sum-accs.cc:67) Written stats to -
 LOG (gmm-est[5.5.166~1-013489]:MleUpdate():transition-model.cc:528) TransitionModel::Update, objf change is 0 per frame over 1.50285e+06 frames. 
-LOG (gmm-est[5.5.166~1-013489]:MleUpdate():transition-model.cc:531) 3 probabilities floored, 0 out of 283 transition-states skipped due to insuffient data (it is normal to have some skipped.)
+LOG (gmm-est[5.5.166~1-013489]:MleUpdate():transition-model.cc:531) 7 probabilities floored, 0 out of 451 transition-states skipped due to insuffient data (it is normal to have some skipped.)
 LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:102) Transition model update: Overall 0 log-like improvement per frame over 1.50285e+06 frames.
-LOG (gmm-est[5.5.166~1-013489]:MleAmDiagGmmUpdate():mle-am-diag-gmm.cc:225) 204 variance elements floored in 95 Gaussians, out of 732
-LOG (gmm-est[5.5.166~1-013489]:MleAmDiagGmmUpdate():mle-am-diag-gmm.cc:229) Removed 0 Gaussians due to counts < --min-gaussian-occupancy=10 and --remove-low-count-gaussians=true
-LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:113) GMM update: Overall 0.984358 objective function improvement per frame over 1.50285e+06 frames
-LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:116) GMM update: Overall avg like per frame = -29.878 over 1.50285e+06 frames.
-LOG (gmm-est[5.5.166~1-013489]:SplitByCount():am-diag-gmm.cc:116) Split 272 states with target = 840, power = 0.25, perturb_factor = 0.01 and min_count = 20, split #Gauss from 732 to 840
+WARNING (gmm-est[5.5.166~1-013489]:MleDiagGmmUpdate():mle-diag-gmm.cc:359) Too little data - removing Gaussian (weight 0.073718, occupation count 9.657064, vector size 39)
+WARNING (gmm-est[5.5.166~1-013489]:MleDiagGmmUpdate():mle-diag-gmm.cc:359) Too little data - removing Gaussian (weight 0.059412, occupation count 9.565288, vector size 39)
+LOG (gmm-est[5.5.166~1-013489]:MleAmDiagGmmUpdate():mle-am-diag-gmm.cc:225) 0 variance elements floored in 0 Gaussians, out of 6478
+LOG (gmm-est[5.5.166~1-013489]:MleAmDiagGmmUpdate():mle-am-diag-gmm.cc:229) Removed 2 Gaussians due to counts < --min-gaussian-occupancy=10 and --remove-low-count-gaussians=true
+LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:113) GMM update: Overall 0.320569 objective function improvement per frame over 1.50285e+06 frames
+LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:116) GMM update: Overall avg like per frame = -90.3582 over 1.50285e+06 frames.
+LOG (gmm-est[5.5.166~1-013489]:SplitByCount():am-diag-gmm.cc:116) Split 448 states with target = 7600, power = 0.25, perturb_factor = 0.01 and min_count = 20, split #Gauss from 6478 to 7600
 LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:146) Written model to exp/tri1/7.mdl
 # Accounting: time=0 threads=1
-# Ended (code 0) at Thu Dec  5 01:04:32 CST 2019, elapsed time 0 seconds
+# Ended (code 0) at Thu Dec  5 14:23:19 CST 2019, elapsed time 0 seconds

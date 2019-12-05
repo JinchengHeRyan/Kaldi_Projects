@@ -1,7 +1,7 @@
-RN /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:42213
-RP /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:42615
-RR /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:43017
-RS /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:43419
-SJ /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:43821
-SP /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:44223
-ST /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:44625
+RN /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:25413
+RP /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:25655
+RR /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:25897
+RS /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:26139
+SJ /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:26381
+SP /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:26623
+ST /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:26865

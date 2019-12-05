@@ -1,19 +1,19 @@
 # gmm-est --write-occs=exp/mono0a/14.occs --mix-up=434 --power=0.25 exp/mono0a/13.mdl "gmm-sum-accs - exp/mono0a/13.*.acc|" exp/mono0a/14.mdl 
-# Started at Thu Dec  5 01:03:35 CST 2019
+# Started at Thu Dec  5 14:22:26 CST 2019
 #
 gmm-est --write-occs=exp/mono0a/14.occs --mix-up=434 --power=0.25 exp/mono0a/13.mdl 'gmm-sum-accs - exp/mono0a/13.*.acc|' exp/mono0a/14.mdl 
 gmm-sum-accs - exp/mono0a/13.1.acc exp/mono0a/13.10.acc exp/mono0a/13.11.acc exp/mono0a/13.12.acc exp/mono0a/13.13.acc exp/mono0a/13.14.acc exp/mono0a/13.15.acc exp/mono0a/13.16.acc exp/mono0a/13.17.acc exp/mono0a/13.18.acc exp/mono0a/13.19.acc exp/mono0a/13.2.acc exp/mono0a/13.20.acc exp/mono0a/13.21.acc exp/mono0a/13.22.acc exp/mono0a/13.23.acc exp/mono0a/13.24.acc exp/mono0a/13.25.acc exp/mono0a/13.26.acc exp/mono0a/13.27.acc exp/mono0a/13.28.acc exp/mono0a/13.29.acc exp/mono0a/13.3.acc exp/mono0a/13.30.acc exp/mono0a/13.31.acc exp/mono0a/13.32.acc exp/mono0a/13.4.acc exp/mono0a/13.5.acc exp/mono0a/13.6.acc exp/mono0a/13.7.acc exp/mono0a/13.8.acc exp/mono0a/13.9.acc 
-LOG (gmm-sum-accs[5.5.166~1-013489]:main():gmm-sum-accs.cc:63) Summed 32 stats, total count 1.50285e+06, avg like/frame -25.1779
+LOG (gmm-sum-accs[5.5.166~1-013489]:main():gmm-sum-accs.cc:63) Summed 32 stats, total count 1.50285e+06, avg like/frame -92.3326
 LOG (gmm-sum-accs[5.5.166~1-013489]:main():gmm-sum-accs.cc:66) Total count of stats is 1.50285e+06
 LOG (gmm-sum-accs[5.5.166~1-013489]:main():gmm-sum-accs.cc:67) Written stats to -
 LOG (gmm-est[5.5.166~1-013489]:MleUpdate():transition-model.cc:528) TransitionModel::Update, objf change is 0 per frame over 1.50285e+06 frames. 
-LOG (gmm-est[5.5.166~1-013489]:MleUpdate():transition-model.cc:531) 4 probabilities floored, 0 out of 62 transition-states skipped due to insuffient data (it is normal to have some skipped.)
+LOG (gmm-est[5.5.166~1-013489]:MleUpdate():transition-model.cc:531) 5 probabilities floored, 0 out of 62 transition-states skipped due to insuffient data (it is normal to have some skipped.)
 LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:102) Transition model update: Overall 0 log-like improvement per frame over 1.50285e+06 frames.
-LOG (gmm-est[5.5.166~1-013489]:MleAmDiagGmmUpdate():mle-am-diag-gmm.cc:225) 181 variance elements floored in 72 Gaussians, out of 403
+LOG (gmm-est[5.5.166~1-013489]:MleAmDiagGmmUpdate():mle-am-diag-gmm.cc:225) 0 variance elements floored in 0 Gaussians, out of 403
 LOG (gmm-est[5.5.166~1-013489]:MleAmDiagGmmUpdate():mle-am-diag-gmm.cc:229) Removed 0 Gaussians due to counts < --min-gaussian-occupancy=10 and --remove-low-count-gaussians=true
-LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:113) GMM update: Overall 0.307524 objective function improvement per frame over 1.50285e+06 frames
-LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:116) GMM update: Overall avg like per frame = -25.1779 over 1.50285e+06 frames.
+LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:113) GMM update: Overall 0.0981505 objective function improvement per frame over 1.50285e+06 frames
+LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:116) GMM update: Overall avg like per frame = -92.3326 over 1.50285e+06 frames.
 LOG (gmm-est[5.5.166~1-013489]:SplitByCount():am-diag-gmm.cc:116) Split 62 states with target = 434, power = 0.25, perturb_factor = 0.01 and min_count = 20, split #Gauss from 403 to 434
 LOG (gmm-est[5.5.166~1-013489]:main():gmm-est.cc:146) Written model to exp/mono0a/14.mdl
 # Accounting: time=0 threads=1
-# Ended (code 0) at Thu Dec  5 01:03:35 CST 2019, elapsed time 0 seconds
+# Ended (code 0) at Thu Dec  5 14:22:26 CST 2019, elapsed time 0 seconds

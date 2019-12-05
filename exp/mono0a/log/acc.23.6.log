@@ -1,16 +1,16 @@
 # gmm-acc-stats-ali exp/mono0a/23.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/6/utt2spk scp:data/train/split32/6/cmvn.scp scp:data/train/split32/6/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:gunzip -c exp/mono0a/ali.6.gz|" exp/mono0a/23.6.acc 
-# Started at Thu Dec  5 01:03:46 CST 2019
+# Started at Thu Dec  5 14:22:35 CST 2019
 #
 gmm-acc-stats-ali exp/mono0a/23.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/6/utt2spk scp:data/train/split32/6/cmvn.scp scp:data/train/split32/6/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:gunzip -c exp/mono0a/ali.6.gz|' exp/mono0a/23.6.acc 
 apply-cmvn --utt2spk=ark:data/train/split32/6/utt2spk scp:data/train/split32/6/cmvn.scp scp:data/train/split32/6/feats.scp ark:- 
 add-deltas ark:- ark:- 
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance CR_8194126A avg. like is -18.5851 over 276 frames.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance DC_43ZA avg. like is -20.9604 over 163 frames.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance DC_Z4A avg. like is -14.7881 over 140 frames.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 200 utterances; for utterance DG_762O8A avg. like is -25.4117 over 198 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance CR_8194126A avg. like is -90.9527 over 276 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance DC_43ZA avg. like is -90.2493 over 163 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance DC_Z4A avg. like is -87.0663 over 140 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 200 utterances; for utterance DG_762O8A avg. like is -92.1364 over 198 frames.
 LOG (apply-cmvn[5.5.166~1-013489]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 231 utterances, errors on 0
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 231 files, 0 with errors.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -19.0887 over 37882 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -89.6482 over 37882 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
-# Accounting: time=0 threads=1
-# Ended (code 0) at Thu Dec  5 01:03:46 CST 2019, elapsed time 0 seconds
+# Accounting: time=1 threads=1
+# Ended (code 0) at Thu Dec  5 14:22:36 CST 2019, elapsed time 1 seconds

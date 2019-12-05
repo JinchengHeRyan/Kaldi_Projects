@@ -1,3 +1,3 @@
-JN /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:24123
-JP /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:24525
-JR /home/jincheng/SMIIP_1ST_HW/fbank/cmvn_train.ark:24927
+JN /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:14523
+JP /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:14765
+JR /home/jincheng/SMIIP_1ST_HW/mfcc/cmvn_train.ark:15007

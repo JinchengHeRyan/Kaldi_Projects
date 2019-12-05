@@ -62,8 +62,9 @@ data/train data/lang exp/mono0a exp/mono0a_ali
 # steps/align_si.sh --nj 4 --cmd "$train_cmd" \
 #    data/train data/lang exp/mono0a exp/mono0a_ali
 
+gauss_num=$2
 steps/train_deltas.sh --cmd "$train_cmd" \
-    300 3000 data/train data/lang exp/mono0a_ali exp/tri1
+    2000 $gauss_num data/train data/lang exp/mono0a_ali exp/tri1
 
 
  utils/mkgraph.sh data/lang exp/tri1 exp/tri1/graph
@@ -75,4 +76,5 @@ utils/int2sym.pl -f 2- data/lang/words.txt  exp/tri1/decode/scoring/19.tra | sed
 
 
 # Getting results [see RESULTS file]
+echo "Gaussian Number: ${gauss_num}" >> results_${feature_type}.txt
 for x in exp/*/decode*; do [ -d $x ] && grep SER $x/wer_* | utils/best_wer.sh >> results_${feature_type}.txt; done

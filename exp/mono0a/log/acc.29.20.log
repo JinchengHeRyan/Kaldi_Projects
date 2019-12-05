@@ -1,16 +1,16 @@
 # gmm-acc-stats-ali exp/mono0a/29.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/20/utt2spk scp:data/train/split32/20/cmvn.scp scp:data/train/split32/20/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:gunzip -c exp/mono0a/ali.20.gz|" exp/mono0a/29.20.acc 
-# Started at Thu Dec  5 01:03:52 CST 2019
+# Started at Thu Dec  5 14:22:41 CST 2019
 #
 gmm-acc-stats-ali exp/mono0a/29.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split32/20/utt2spk scp:data/train/split32/20/cmvn.scp scp:data/train/split32/20/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:gunzip -c exp/mono0a/ali.20.gz|' exp/mono0a/29.20.acc 
-add-deltas ark:- ark:- 
 apply-cmvn --utt2spk=ark:data/train/split32/20/utt2spk scp:data/train/split32/20/cmvn.scp scp:data/train/split32/20/feats.scp ark:- 
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance KH_8183926A avg. like is -21.8789 over 291 frames.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance KK_42OA avg. like is -23.4811 over 159 frames.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance KK_Z8A avg. like is -28.4024 over 135 frames.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 200 utterances; for utterance KN_78A avg. like is -21.9954 over 114 frames.
+add-deltas ark:- ark:- 
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance KH_8183926A avg. like is -91.8723 over 291 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance KK_42OA avg. like is -96.379 over 159 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 150 utterances; for utterance KK_Z8A avg. like is -96.415 over 135 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:105) Processed 200 utterances; for utterance KN_78A avg. like is -91.8072 over 114 frames.
 LOG (apply-cmvn[5.5.166~1-013489]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 231 utterances, errors on 0
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:112) Done 231 files, 0 with errors.
-LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -20.5133 over 40134 frames.
+LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -92.0901 over 40134 frames.
 LOG (gmm-acc-stats-ali[5.5.166~1-013489]:main():gmm-acc-stats-ali.cc:123) Written accs.
 # Accounting: time=0 threads=1
-# Ended (code 0) at Thu Dec  5 01:03:52 CST 2019, elapsed time 0 seconds
+# Ended (code 0) at Thu Dec  5 14:22:41 CST 2019, elapsed time 0 seconds

@@ -1,8 +1,9 @@
 # gmm-init-model --write-occs=exp/tri1/1.occs exp/tri1/tree exp/tri1/treeacc data/lang/topo exp/tri1/1.mdl 
-# Started at Thu Dec  5 01:04:29 CST 2019
+# Started at Thu Dec  5 14:23:15 CST 2019
 #
 gmm-init-model --write-occs=exp/tri1/1.occs exp/tri1/tree exp/tri1/treeacc data/lang/topo exp/tri1/1.mdl 
-LOG (gmm-init-model[5.5.166~1-013489]:main():gmm-init-model.cc:271) Number of separate statistics is 824
+LOG (gmm-init-model[5.5.166~1-013489]:main():gmm-init-model.cc:271) Number of separate statistics is 821
+WARNING (gmm-init-model[5.5.166~1-013489]:InitAmGmm():gmm-init-model.cc:83) Very small count for state 382: 83; corresponding phone list: 13 
 LOG (gmm-init-model[5.5.166~1-013489]:main():gmm-init-model.cc:306) Wrote model.
 # Accounting: time=0 threads=1
-# Ended (code 0) at Thu Dec  5 01:04:29 CST 2019, elapsed time 0 seconds
+# Ended (code 0) at Thu Dec  5 14:23:15 CST 2019, elapsed time 0 seconds
