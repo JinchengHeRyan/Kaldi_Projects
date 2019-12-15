@@ -15,7 +15,7 @@ data_path=waves_data
 
 
 
-stage=6
+stage=1
 
 # TODO: fix
 if [ $stage -le 0 ]; then
