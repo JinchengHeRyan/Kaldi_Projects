@@ -9,7 +9,7 @@ vaddir=`pwd`/mfcc
 data_path=waves_data
 
 # The trials file is downloaded by local/make_voxceleb1.pl.
-# voxceleb1_trials=data/voxceleb1_test/trials
+voxceleb1_trials=data/voxceleb1_test/trials
 # voxceleb1_root=/export/corpora/VoxCeleb1
 # voxceleb2_root=/export/corpora/VoxCeleb2
 
@@ -33,6 +33,11 @@ if [ $stage -le 1 ]; then
 
   # Prepare data
   local/prepare_data.sh $data_path
+
+  # Prepare trials
+  rm $voxceleb1_trials
+  touch $voxceleb1_trials
+  python3 local/produce_trials.py data/voxceleb1_test/utt2spk $voxceleb1_trials
 
   echo "Stage $stage Begin! "
   # Make MFCCs and compute the energy-based VAD for each dataset

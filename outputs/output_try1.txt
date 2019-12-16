@@ -75,3 +75,11 @@ Stage 4 Finish!
 Stage 5 Begin! 
 Stage 5 Finish! 
 Stage 6 Begin! 
+Stage 6 Begin! 
+Stage 6 Begin! 
+Stage 6 Finish! 
+Stage 7 Begin! 
+EER: 29.2%
+minDCF(p-target=0.01): 0.9983
+minDCF(p-target=0.001): 0.9997
+Stage 7 Finish! 
