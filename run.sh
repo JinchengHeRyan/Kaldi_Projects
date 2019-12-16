@@ -35,7 +35,7 @@ if [ $stage -le 1 ]; then
   local/prepare_data.sh $data_path
 
   # Prepare trials
-  rm $voxceleb1_trials
+  rm -f $voxceleb1_trials
   touch $voxceleb1_trials
   python3 local/produce_trials.py data/voxceleb1_test/utt2spk $voxceleb1_trials
 
