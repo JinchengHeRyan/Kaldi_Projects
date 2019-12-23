@@ -54,7 +54,7 @@ fi
 if [ $stage -le 2 ]; then
   echo "Stage $stage Begin! "
   # Train the UBM.
-  sid/train_diag_ubm.sh --cmd "$train_cmd --mem 4G" --nj 40 --num-threads 8 data/train 2048 exp/diag_ubm
+  sid/train_diag_ubm.sh --cmd "$train_cmd --mem 4G" --nj 40 --num-threads 8 data/train 256 exp/diag_ubm
   sid/train_full_ubm.sh --cmd "$train_cmd --mem 25G" --nj 40 --remove-low-count-gaussians false data/train exp/diag_ubm exp/full_ubm
   echo "Stage $stage Finish! "
   stage=3
