@@ -6,7 +6,7 @@ Stage 1 Begin!
 steps/make_mfcc.sh --write-utt2num-frames true --mfcc-config conf/mfcc.conf --nj 8 --cmd run.pl data/train exp/make_mfcc /home/jincheng/SMIIP_Kaldi_Projects/SMIIP_3RD_HW_timit/mfcc
 utils/validate_data_dir.sh: Successfully validated data-directory data/train
 steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
-Succeeded creating MFCC features for train
+steps/make_mfcc.sh: Succeeded creating MFCC features for train
 fix_data_dir.sh: kept all 4620 utterances.
 fix_data_dir.sh: old files are kept in data/train/.backup
 sid/compute_vad_decision.sh --nj 8 --cmd run.pl data/train exp/make_vad /home/jincheng/SMIIP_Kaldi_Projects/SMIIP_3RD_HW_timit/mfcc
@@ -16,7 +16,7 @@ fix_data_dir.sh: old files are kept in data/train/.backup
 steps/make_mfcc.sh --write-utt2num-frames true --mfcc-config conf/mfcc.conf --nj 8 --cmd run.pl data/voxceleb1_test exp/make_mfcc /home/jincheng/SMIIP_Kaldi_Projects/SMIIP_3RD_HW_timit/mfcc
 utils/validate_data_dir.sh: Successfully validated data-directory data/voxceleb1_test
 steps/make_mfcc.sh: [info]: no segments file exists: assuming wav.scp indexed by utterance.
-Succeeded creating MFCC features for voxceleb1_test
+steps/make_mfcc.sh: Succeeded creating MFCC features for voxceleb1_test
 fix_data_dir.sh: kept all 1680 utterances.
 fix_data_dir.sh: old files are kept in data/voxceleb1_test/.backup
 sid/compute_vad_decision.sh --nj 8 --cmd run.pl data/voxceleb1_test exp/make_vad /home/jincheng/SMIIP_Kaldi_Projects/SMIIP_3RD_HW_timit/mfcc
@@ -77,7 +77,7 @@ Stage 5 Finish!
 Stage 6 Begin! 
 Stage 6 Finish! 
 Stage 7 Begin! 
-EER: 29.2%
+EER: 28.11%
 minDCF(p-target=0.01): 0.9983
-minDCF(p-target=0.001): 0.9997
+minDCF(p-target=0.001): 0.9999
 Stage 7 Finish! 
