@@ -11,6 +11,6 @@
 # or search for the string 'default_config' in utils/queue.pl or utils/slurm.pl.
 
 # export train_cmd="run.pl -q g.q -l -gpu=1"
-# export train_cmd='run.pl'
+export train_cmd='run.pl'
 
-export train_cmd="run.pl -gpu=3"
+# export train_cmd="run.pl -gpu=3"
