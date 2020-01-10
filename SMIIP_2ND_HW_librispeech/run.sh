@@ -12,7 +12,7 @@ data=../librispeech_data/export/a15/vpanayotov/data
 data_url=www.openslr.org/resources/12
 lm_url=www.openslr.org/resources/11
 mfccdir=mfcc
-stage=1
+stage=20
 
 . ./cmd.sh
 . ./path.sh
@@ -462,7 +462,7 @@ fi
 if [ $stage -le 20 ]; then
   echo "Stage $stage Begin! "
   # train and test nnet3 tdnn models on the entire data with data-cleaning.
-  local/chain/run_tdnn.sh # set "--stage 11" if you have already run local/nnet3/run_tdnn.sh
+  CUDA_VISIBLE_DEVICES=4,5 local/chain/run_tdnn.sh # set "--stage 11" if you have already run local/nnet3/run_tdnn.sh
   echo "Stage $stage Finish! "
   stage=21
 fi

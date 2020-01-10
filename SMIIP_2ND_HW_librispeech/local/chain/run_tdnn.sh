@@ -126,11 +126,11 @@ set -e
 # Final valid prob (xent)       -1.0441   -0.7874
 
 # configs for 'chain'
-stage=0
+stage=15
 decode_nj=50
-train_set=train_960_cleaned
+train_set=train_2kshort
 gmm=tri6b_cleaned
-nnet3_affix=_cleaned
+nnet3_affix=_cleaned_gpu
 
 # The rest are configs specific to this script.  Most of the parameters
 # are just hardcoded at this level, in the commands below.
@@ -278,8 +278,8 @@ if [ $stage -le 15 ]; then
     --trainer.num-chunk-per-minibatch 64 \
     --trainer.frames-per-iter 2500000 \
     --trainer.num-epochs 4 \
-    --trainer.optimization.num-jobs-initial 3 \
-    --trainer.optimization.num-jobs-final 16 \
+    --trainer.optimization.num-jobs-initial 2 \
+    --trainer.optimization.num-jobs-final 2 \
     --trainer.optimization.initial-effective-lrate 0.00015 \
     --trainer.optimization.final-effective-lrate 0.000015 \
     --trainer.max-param-change 2.0 \

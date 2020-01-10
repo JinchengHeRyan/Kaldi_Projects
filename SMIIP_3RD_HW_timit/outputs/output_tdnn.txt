@@ -1,0 +1,6 @@
+./run_xvector.sh: Getting neural network training egs
+sid/nnet3/xvector/get_egs.sh --cmd run.pl -gpu=3 --nj 8 --stage 0 --frames-per-iter 1000000000 --frames-per-iter-diagnostic 100000 --min-frames-per-chunk 200 --max-frames-per-chunk 400 --num-diagnostic-archives 3 --num-repeats 50 data/train exp/xvector_nnet_1a/egs
+sid/nnet3/xvector/get_egs.sh: Preparing train and validation lists
+sid/nnet3/xvector/get_egs.sh: Producing 1 archives for training
+sid/nnet3/xvector/get_egs.sh: Reducing num-jobs 8 to number of training archives 1
+sid/nnet3/xvector/get_egs.sh: Allocating training examples
