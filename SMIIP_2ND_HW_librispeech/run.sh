@@ -12,7 +12,7 @@ data=../librispeech_data/export/a15/vpanayotov/data
 data_url=www.openslr.org/resources/12
 lm_url=www.openslr.org/resources/11
 mfccdir=mfcc
-stage=20
+stage=21
 
 . ./cmd.sh
 . ./path.sh
@@ -486,3 +486,13 @@ fi
 
 # Wait for decodings in the background
 wait
+
+if [ $stage -le 21 ]; then
+  if [ -f outputs/tdnn_wer_results.txt ]; then
+    rm outputs/tdnn_wer_results.txt
+  fi
+  for x in exp/chain_cleaned_gpu/tdnn_1d_sp/decode_*; do
+    echo $x
+    grep WER $x/wer_* | utils/best_wer.sh >> outputs/tdnn_wer_results.txt
+  done
+fi

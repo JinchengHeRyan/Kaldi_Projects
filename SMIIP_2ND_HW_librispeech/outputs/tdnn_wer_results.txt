@@ -1,0 +1,16 @@
+%WER 12.09 [ 6577 / 54402, 848 ins, 739 del, 4990 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_dev_clean_fglarge/wer_9_0.5
+%WER 12.86 [ 6998 / 54402, 794 ins, 946 del, 5258 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_dev_clean_tglarge/wer_10_0.5
+%WER 16.25 [ 8838 / 54402, 1015 ins, 1140 del, 6683 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_dev_clean_tgmed/wer_10_0.0
+%WER 18.17 [ 9884 / 54402, 1081 ins, 1282 del, 7521 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_dev_clean_tgsmall/wer_9_0.0
+%WER 34.89 [ 17778 / 50948, 1608 ins, 2802 del, 13368 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_dev_other_fglarge/wer_11_0.5
+%WER 36.80 [ 18751 / 50948, 1708 ins, 2959 del, 14084 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_dev_other_tglarge/wer_11_0.5
+%WER 41.04 [ 20909 / 50948, 2020 ins, 3216 del, 15673 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_dev_other_tgmed/wer_11_0.0
+%WER 43.44 [ 22134 / 50948, 1695 ins, 4074 del, 16365 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_dev_other_tgsmall/wer_12_0.0
+%WER 13.19 [ 6936 / 52576, 864 ins, 818 del, 5254 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_test_clean_fglarge/wer_9_0.5
+%WER 13.87 [ 7292 / 52576, 846 ins, 961 del, 5485 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_test_clean_tglarge/wer_10_0.5
+%WER 17.09 [ 8983 / 52576, 1030 ins, 1160 del, 6793 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_test_clean_tgmed/wer_10_0.0
+%WER 18.96 [ 9969 / 52576, 1038 ins, 1409 del, 7522 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_test_clean_tgsmall/wer_10_0.0
+%WER 37.90 [ 19839 / 52343, 1636 ins, 3467 del, 14736 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_test_other_fglarge/wer_12_0.5
+%WER 39.64 [ 20748 / 52343, 1601 ins, 3723 del, 15424 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_test_other_tglarge/wer_12_0.5
+%WER 44.02 [ 23042 / 52343, 2059 ins, 3627 del, 17356 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_test_other_tgmed/wer_11_0.0
+%WER 46.30 [ 24233 / 52343, 1878 ins, 4242 del, 18113 sub ] exp/chain_cleaned_gpu/tdnn_1d_sp/decode_test_other_tgsmall/wer_11_0.0
