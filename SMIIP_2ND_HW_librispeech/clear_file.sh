@@ -1,0 +1,9 @@
+rm -f exp/nnet3_cleaned_gpu/diag_ubm/train_2kshort_sp_hires_subset/utt2uniq
+rm -f data/train_2kshort_sp_hires/utt2uniq
+rm -f data/train_2kshort_sp_hires/.backup/utt2uniq
+rm -f data/train_2kshort_sp/utt2uniq
+rm -f data/train_2kshort_sp/.backup/utt2uniq
+rm -f data/train_2kshort_sp_hires_60k/utt2uniq
+rm -f data/train_2kshort_sp/feats.scp
+rm -rf exp/tri6b_cleaned_ali_train_2kshort_sp
+rm -f exp/chain_cleaned_gpu/tree_sp/final.mdl

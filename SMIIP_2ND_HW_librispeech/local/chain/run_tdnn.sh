@@ -126,7 +126,7 @@ set -e
 # Final valid prob (xent)       -1.0441   -0.7874
 
 # configs for 'chain'
-stage=15
+stage=0
 decode_nj=50
 train_set=train_2kshort
 gmm=tri6b_cleaned
@@ -259,6 +259,14 @@ if [ $stage -le 15 ]; then
     utils/create_split_dir.pl \
      /export/b{09,10,11,12}/$USER/kaldi-data/egs/swbd-$(date +'%m_%d_%H_%M')/s5c/$dir/egs/storage $dir/egs/storage
   fi
+
+  # Remove utt2uniq
+  rm -f exp/nnet3_cleaned_gpu/diag_ubm/train_2kshort_sp_hires_subset/utt2uniq
+  rm -f data/train_2kshort_sp_hires/utt2uniq
+  rm -f data/train_2kshort_sp_hires/.backup/utt2uniq
+  rm -f data/train_2kshort_sp/utt2uniq
+  rm -f data/train_2kshort_sp/.backup/utt2uniq
+  rm -f data/train_2kshort_sp_hires_60k/utt2uniq
 
   steps/nnet3/chain/train.py --stage $train_stage \
     --cmd "$decode_cmd" \
